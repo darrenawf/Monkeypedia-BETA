@@ -11,6 +11,9 @@ body {
 }
 
 /*HEADER-----------------------------------*/
+
+
+
 nav {
     background: whitesmoke;
     height: 125px;
@@ -94,8 +97,28 @@ a.active,a:hover{
     background: lightgray;
 }
 */
-
+.monkey{
+    text-decoration: underline;
+    color: gray;
+    font-size: 40px;
+    
+}
 .content {
-    float: right;
-    background: lightgreen;
+    margin-top:50px;
+    float: left;
+    margin-left: 350px;
+    background: none;
+}
+.content h1{
+    font-size: 100px;
+
+}
+
+.content a{
+    color: inherit;
+    text-decoration:inherit;
+    box-sizing:border-box;
+    margin-right: 70px;
+    width: 300px;
+
 }
