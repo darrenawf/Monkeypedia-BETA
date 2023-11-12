@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* HEADER ------------------------------------------------- */
+nav {
+    background: whitesmoke;
+    height: 100px;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+label.logo {
+    margin-left: 10px;
+    /* Adjusted margin for responsiveness */
+    color: black;
+    font-size: 45px;
+    line-height: 75px;
+    font-weight: bold;
+    float: left;
+}
+
+label.logo a,
+nav ul li a {
+    color: black;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 75px;
+    border-left: 1px solid black;
+    padding: 0 20px;
+    font-size: 25px;
+}
+
+label.logo img {
+    height: 75px;
+    width: auto;
+    float: left;
+    margin-right: 20px;
+    border: none;
+}
+
+/* SIDEBAR ------------------------------------------------- */
+.sidebar {
+    position: absolute;
+    width: 270px;
+    background: rgb(231, 231, 231);
+    font-size: 25px;
+    height: 100%;
+}
+
+.sidebar header {
+    margin: 20px 0 0 20px;
+}
+
+.sidebar ul li {
+    display: table;
+    margin-left: 20px;
+    border: 1px solid black;
+}
+
+.sidebar ul a {
+    color: slategray;
+}
+
+.searchbar {
+    border-radius: 100px;
+    margin: 30px 0 0 20px;
+    width: 225px;
+    font-size: 25px;
+    padding: 2% 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.filterList {
+    display: none;
+}
+
+/* MAIN CONTENT ----------------------------------------------- */
+.monkeyList {
+    color: rgb(80, 80, 80);
+    font-size: 25px;
+}
+
+.content {
+    margin-top: 30px;
+    float: left;
+    margin-left: 350px;
+}
+
+.content .title {
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*border: 1px black solid;*/
+    display: inline-block;
+}
+
+.content a {
+    /*All Monkey Links*/
+    color: inherit;
+    text-decoration: underline;
+    margin-right: 30px;
+    width: 220px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* MONKEY CONTENT ---------------------------------------------*/
+.monkeyImg {
+    border: 1px black solid;
+    height: 300px;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.description {
+    border: 1px black solid;
+    font-size: 25px;
+}
+
+.content2 {
+    margin-top: 30px;
+    display: inline-block;
+}
+
+/* STAR REVIEWS -----------------------------------------------*/
+.review {
+    font-size: 25px;
+    margin-left: 60px;
+}
+
+.reviewNum {
+    margin-top: 6px;
+    position: absolute;
+    font-size: 25px;
+}
+
+.fa-star {
+    color: rgb(219, 219, 219);
+    margin-right: 5px;
+    visibility: hidden
+}
+
+.fa-star:hover {
+    color: orange;
+    cursor: pointer;
+    visibility: hidden
+}
+
+.fa-star:before {
+    visibility: visible;
+    position: absolute;
+}
+
+.fa-star:checked:before {
+    color: orange;
+    position: absolute;
+}
+
+/* SCREEN ADJUST --------------------------------------------- */
+@media screen and (max-width: 800px) {
+    .monkeyOfTheDayClass {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 40px;
+    }
+
+    label.logo {
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+
+    nav ul li {
+        padding-left: 0px;
+        border-left: none;
+    }
+}

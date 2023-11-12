@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="monkeypedia_sheet01.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Monkeypedia.js"></script>
+</head>
+
+<body>
+    <!--HEADER------------------------------------------------------->
+    <nav>
+        <label class="logo"><a href="home.html"><img src="images/Monkeypedia_Logo.png">Monkeypedia</a></label>
+        <ul>
+            <li><a class="monkeyOfTheDayClass" href="monkeyOfTheDay.html">Monkey of the Day</a></li>
+            <li><a href="">Sign Up</a></li>
+        </ul>
+    </nav>
+    <!--HEADER------------------------------------------------------->
+    <!--SIDEBAR------------------------------------------------------>
+    <div class="sidebar">
+        <input class="searchbar" type="text" placeholder="Search Monkeys">
+        <header>Filters</header>
+        <ul>
+            <li>
+                <input id="checkboxRegion" type="checkbox" onclick="checkRegion()"> Region
+                <div class="filterList" id="regionList">
+                    <ul>
+                        <li><input type="checkbox"> Africa</li>
+                        <li><input type="checkbox"> Asia</li>
+                        <li><input type="checkbox"> Latin America</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <input id="checkboxSpecies" type="checkbox" onclick="checkSpecies()"> Species
+
+                <div class="filterList" id="speciesList">
+                    <ul>
+                        <li><input type="checkbox"> Gibbons</li>
+                        <li><input type="checkbox"> Great Apes</li>
+                        <li><input type="checkbox"> Lemurs</li>
+                    </ul>
+                </div>
+            </li>
+            <li><input id="checkboxDiet" type="checkbox" onclick="checkDiet()"> Diet
+                <div class="filterList" id="dietList">
+                    <ul>
+                        <li><input type="checkbox"> Herbivore</li>
+                        <li><input type="checkbox"> Omnivore</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--SIDEBAR------------------------------------------------------>
+    <!--CONTENT------------------------------------------------------>
+    <div class="content">
+        <div class="title">All Monkeys</div>
+        <ul class="monkeyList">
+            <a href="">Aye-aye</a>
+            <a href="baboon.html">Baboon</a>
+            <a href="chimpanzee.html">Chimpanzee</a>
+            <a href="">Douc</a>
+            <a href="">Finger Monkey</a>
+            <a href="">Gorilla</a>
+            <a href="">Indri</a>
+            <a href="">Japanese Macaque</a>
+            <a href="">Lar Gibbon</a>
+            <a href="">Mandrill</a>
+            <a href="">Orangutan</a>
+            <a href="">Proboscis</a>
+            <a href="">Siaming</a>
+            <a href="snub_nosed_monkey.html">Snub-Nosed Monkey</a>
+            <a href="">Spider Monkey</a>
+            <a href="">Squirrel Monkey</a>
+            <a href="">Woolly Monkey</a>
+        </ul>
+    </div>
+    <!--CONTENT------------------------------------------------------>
+</body>
+
+</html>
