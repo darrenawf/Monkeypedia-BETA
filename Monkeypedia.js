@@ -99,7 +99,6 @@ function results(input){
     for (i = 0; i < (monkeyArray.length);i++){
         monkey = monkeyArray[i].toLowerCase(); //I made them both lower case so it's not case sensitive
         if (monkey.includes(input) == true){
-            alert(monkey);
             link = '"' + monkey+ '.html"';
             output = output + "<a href="+link+">"+monkeyArray[i]+"</a>" //creates the <a> tag with a working link
         }
