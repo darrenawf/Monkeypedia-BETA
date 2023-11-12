@@ -100,7 +100,7 @@ function results(input){
         monkey = monkeyArray[i].toLowerCase(); //I made them both lower case so it's not case sensitive
         if (monkey.includes(input) == true){
             link = '"' + monkey+ '.html"';
-            output = output + "<a href="+link+">"+monkeyArray[i]+"</a>" //creates the <a> tag with a working link
+            output = output + "<a href="+link+">"+monkeyArray[i]+"</a>" //creates the <a> tag with a working link, Note: The link most likely doesnt work with monkey names with spaces, but I can easily fix that later
         }
     }
     document.getElementById("results").innerHTML = output;
