@@ -194,3 +194,25 @@ label.logo img {
         border-left: none;
     }
 }
+
+
+/* LOGIN CONTENT ----------------------------------------------- */
+
+.inputBox{
+    border-radius: 100px;
+    margin-bottom: 20px;
+    width: 250px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    background-color: darkgray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
