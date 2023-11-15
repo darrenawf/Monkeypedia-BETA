@@ -198,7 +198,7 @@ label.logo img {
 
 /* LOGIN CONTENT ----------------------------------------------- */
 
-.inputBox{
+.inputBox {
     border-radius: 100px;
     margin-bottom: 20px;
     width: 250px;
@@ -207,7 +207,8 @@ label.logo img {
     padding: 0px 8px;
 }
 
-.signIn, .createAccount{
+.signIn,
+.createAccount {
     font-size: 25px;
 }
 
@@ -218,14 +219,18 @@ label.logo img {
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
-  }
-  
-  .right {
+}
+
+.right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-  }
-  
-  .left {
+}
+
+.left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-  }
+}
+
+.scrollImg button {
+    width: 198px;
+}
