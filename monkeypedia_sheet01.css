@@ -105,7 +105,7 @@ label.logo img {
     display: inline-block;
 }
 
-.content a {
+.monkeyLink {
     /*All Monkey Links*/
     color: inherit;
     text-decoration: underline;
@@ -201,15 +201,35 @@ label.logo img {
 .inputBox {
     border-radius: 100px;
     margin-bottom: 20px;
+    margin-top: 10px;
     width: 250px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0px 8px;
+    padding: 5px 8px;
 }
 
 .signIn,
 .createAccount {
-    font-size: 25px;
+    margin-top: 10px;
+    font-size: 20px;
+    border: 2px black solid;
+    padding: 5px 15px;
+    border-radius: 100px;
+    width: 250px;
+    background: whitesmoke;
+}
+
+.clickHere {
+    color: inherit;
+    text-decoration: underline;
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 20px;
+    color: rgb(80, 80, 80);
+}
+
+.defaultText{
+    font-size: 20px;
 }
 
 /* ARROWS ------------------------------------------------------ */
