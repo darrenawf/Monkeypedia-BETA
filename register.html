@@ -56,15 +56,17 @@
     <!--SIDEBAR------------------------------------------------------>
     <!--CONTENT------------------------------------------------------>
     <div class="content">
-        <div class="title">Register</div>
-        <br><br>
-        <p style="font-size: 25px;">Username:</p><br>
-        <input id="newUser" class="inputBox" type="text" placeholder="ex. MonkeyLover3000">
-        <p style="font-size: 25px;">Password:</p><br>
-        <input id="newPass" class="inputBox" type="text" placeholder="ex. Banana123">
-        <br><button class="createAccount" onclick="createAccount()">Register</button>
-
-        <p class="output" style="font-size: 20px;">Registered? <a style="width:80px; margin:0 0 0 0" href="sign_in.html">Click Here</a> to login!</p>
+        <div class="title">Create Account</div>
+        <div class="defaultText">Already have one? <a class="clickHere" href="sign_in.html">Sign in</a></div>
+        <div class="defaultText">Email:</div>
+        <input class="inputBox" type="text" placeholder="ex. gibbon@gmail.com">
+        <div class="defaultText">Username:</div>
+        <input class="inputBox" type="text" placeholder="ex. MonkeyLover3000">
+        <div class="defaultText">Password:</div>
+        <input class="inputBox" type="text" placeholder="ex. Banana123">
+        <div class="defaultText">Re-enter Password:</div>
+        <input class="inputBox" type="text" placeholder="ex. Banana123">
+        <br><button class="signIn" onclick="createAccount()">Create Account</button>
 
     </div>
     <!--CONTENT------------------------------------------------------>
