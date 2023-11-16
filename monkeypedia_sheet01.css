@@ -67,7 +67,6 @@ label.logo img {
 .sidebar ul li {
     display: table;
     margin-left: 20px;
-    border: 1px solid black;
 }
 
 .sidebar ul a {
@@ -112,7 +111,6 @@ label.logo img {
     text-decoration: underline;
     margin-right: 30px;
     width: 220px;
-    border: 1px solid black;
     display: inline-block;
     margin-top: 20px;
 }
@@ -141,6 +139,7 @@ label.logo img {
 .content3 {
     display: inline-block;
     margin: 15px 20px 0px 420px;
+    width: 400px;
 }
 
 .descriptionTitle {

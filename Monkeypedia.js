@@ -2,23 +2,32 @@
 Type here
 */
 /*GLOBAL VARIABLES====================================*/
-var monkeyArray = ["Aye-aye", "Baboon", "Chimpanzee", "Douc", "Finger Monkey", "Gorilla", "Indri", "Japanese Macaque", "Lar Gibbon", "Mandrill", "Orangutan", "Proboscis", "Siamang", "Snub-Nosed Monkey", "Spider Monkey", "Squirrel Monkey", "Woolly Monkey"];
+var monkeyArray = ["Aye-aye Lemur", "Baboon", "Chimpanzee", "Douc", "Finger Monkey", "Gorilla", "Indri Lemur", "Japanese Macaque", "Lar Gibbon", "Mandrill", "Orangutan", "Proboscis", "Siamang", "Snub-Nosed Monkey", "Spider Monkey", "Squirrel Monkey", "Woolly Monkey"];
 var monkeyImgArr = [
     ["images/aye-aye_01.jpg",
         "images/aye-aye_02.jpg",
         "images/aye-aye_03.jpg"],
-    ["images/baboon_01.jpg",
+    ["images/baboon_03.jpg",
         "images/baboon_02.jpg",
-        "images/baboon_03.jpg"],
+        "images/baboon_01.jpg"],
     [
         "images/chimpanzee_03.jpg",
         "images/chimpanzee_01.jpg",
-        "images/chimpanzee_02.jpg",]
+        "images/chimpanzee_02.jpg"],
+    [
+        "images/douc_01.jpg",
+        "images/douc_02.jpg",
+        "images/douc_03.jpg"]
 ];
 var monkeyInfo = [
     ["Africa", "Africa", "Africa", "Asia", "Latin America", "Africa", "Africa", "Asia", "Asia", "Africa", "Asia", "Asia", "Asia", "Asia", "Latin America", "Latin America", "Latin America"],
     ["Lemur", "Cercopithecidae", "Great Ape", "Cercopithecidae", "Marmoset", "Great Ape", "Lemur", "Cercopithecidae", "Gibbon", "Cercopithecidae", "Great Ape", "Cercopithecidae", "Gibbon", "Cercopithecidae", "Atelidae", "Cebidae", "Atelidae"],
     ["Omnivore", "Herbivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "herbivore", "Omnivore", "Omnivore"]
+]
+var monkeyDesc = [
+    [],
+    [],
+    ['Chimpanzees, also known as "Chimps" in American Slang, are very cool animals. They are larger and smarter than your average monkey. People share approximately 95-98% of DNA with Chimpanzees. Chimps are the monkey with the longest possible life - span, the oldest ever chimpanzee to live named "Little Mama", was alive for around 75 - 80 years and sadly passed away on November 14, 2017. "Little Mama" was best known as a professional ice skater. Chimpanzees are very handy creatures. Chimps are also special because have the ability to use tools such as hammers and sticks since they got two big thumbs like you.']
 ]
 var scrollImg = 0;
 /*CHANGE MONKEY=======================================*/
@@ -35,6 +44,7 @@ function loadMonkey(monkeyType) {
     document.getElementById("species").innerHTML = monkeyInfo[1][monkeyType];
     document.getElementById("diet").innerHTML = monkeyInfo[2][monkeyType];
     document.getElementById("monkeyImg").src = monkeyImgArr[monkeyType][scrollImg];
+    document.getElementById("description").innerHTML = monkeyDesc[monkeyType];
 }
 /*SLIDE IMAGES========================================*/
 function sLeft(monkeyType) {
@@ -142,18 +152,17 @@ function search() {
     window.location.href = 'search_results.html?input=' + encodeURIComponent(input);
 }
 
-function results(input) {
+function results(input, monkeyType) {
     document.getElementById("resultsTitle").innerHTML = "Search Results for: \"" + input + "\"";
     input = input.toLowerCase();
     var output = "";
     for (i = 0; i < (monkeyArray.length); i++) {
         monkey = monkeyArray[i].toLowerCase(); //I made them both lower case so it's not case sensitive
         if (monkey.includes(input) == true) {
-            link = '"' + monkey + '.html"';
+            link = '"monkey.html?data=' + 1 + '.html"';
             output = output + "<a class=\"monkeyLink\" href=" + link + ">" + monkeyArray[i] + "</a>" //creates the <a> tag with a working link, Note: The link most likely doesnt work with monkey names with spaces, but I can easily fix that later
         }
     }
     document.getElementById("results").innerHTML = output;
 }
 /*SEARCH=============================================*/
-

@@ -57,7 +57,7 @@
     <!--CONTENT------------------------------------------------------>
     <div class="content">
         <div>
-            <div id="title" class="title"></div>
+            <div id="title" class="title">Monkey of the Day</div>
             <div class="reviewNum">(5.0)</div>
             <div class="review">
                 <input type="checkbox" class="fa fa-star" onclick="star(1)"></input>
@@ -86,9 +86,9 @@
                 </div>
                 <div class="infoRight">
                     <ul class="defaultText">
-                        <li id="region"></li>
-                        <li id="species"></li>
-                        <li id="diet"></li>
+                        <li id="region">N.A.</li>
+                        <li id="species">N.A.</li>
+                        <li id="diet">N.A.</li>
                     </ul>
                 </div>
             </div>
@@ -100,18 +100,6 @@
         </div>
     </div>
     <!--CONTENT------------------------------------------------------>
-    <script>
-        // Function to get query parameters from the URL
-        function getQueryParam(param) {
-            var urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        // Get the data from the query parameter
-        var receivedData = getQueryParam("data");
-
-        console.log("Received data:", receivedData); //LOG
-    </script>
 </body>
 
 </html>
