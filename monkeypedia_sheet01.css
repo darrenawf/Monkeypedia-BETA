@@ -164,7 +164,7 @@ label.logo img {
 .fa-star {
     color: rgb(219, 219, 219);
     margin-right: 5px;
-    visibility: hidden
+    visibility: hidden;
 }
 
 .fa-star:hover {
@@ -248,11 +248,11 @@ label.logo img {
     margin: 20px 0;
     font-size: 20px;
     color: rgb(80, 80, 80);
+    overflow-x: visible;
 }
 
 .defaultText {
     font-size: 20px;
-    overflow-x: visible;
 }
 
 /* ARROWS ------------------------------------------------------ */
