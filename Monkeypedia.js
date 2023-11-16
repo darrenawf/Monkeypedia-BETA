@@ -17,7 +17,7 @@ function monkeyFunction(monkeyType) {
     // Get the data you want to send
     var dataToSend = monkeyType;
     // Navigate to the receiver page with the data as a query parameter
-    window.location.href = "chimpanzee.html?data=" + encodeURIComponent(dataToSend);
+    window.location.href = "monkey.html?data=" + encodeURIComponent(dataToSend);
 }
 /*SLIDE IMAGES========================================*/
 function sLeft() {

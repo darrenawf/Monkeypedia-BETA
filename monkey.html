@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="monkeypedia_sheet01.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Monkeypedia.js"></script>
+</head>
+
+<body onload="loadMonkey()">
+    <!--HEADER------------------------------------------------------->
+    <nav>
+        <label class="logo"><a href="home.html"><img src="images/Monkeypedia_Logo.png">Monkeypedia</a></label>
+        <ul>
+            <li><a class="monkeyOfTheDayClass" href="monkeyOfTheDay.html">Monkey of the Day</a></li>
+            <li><a href="sign_in.html">Sign in</a></li>
+        </ul>
+    </nav>
+    <!--HEADER------------------------------------------------------->
+    <!--SIDEBAR------------------------------------------------------>
+    <div class="sidebar">
+        <input class="searchbar" id="search" onchange="search()" type="text" placeholder="Search Monkeys">
+        <header>Filters</header>
+        <ul>
+            <li>
+                <input id="checkboxRegion" type="checkbox" onclick="checkRegion()"> Region
+                <div class="filterList" id="regionList">
+                    <ul>
+                        <li><input type="checkbox"> Africa</li>
+                        <li><input type="checkbox"> Asia</li>
+                        <li><input type="checkbox"> Latin America</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <input id="checkboxSpecies" type="checkbox" onclick="checkSpecies()"> Species
+
+                <div class="filterList" id="speciesList">
+                    <ul>
+                        <li><input type="checkbox"> Gibbons</li>
+                        <li><input type="checkbox"> Great Apes</li>
+                        <li><input type="checkbox"> Lemurs</li>
+                    </ul>
+                </div>
+            </li>
+            <li><input id="checkboxDiet" type="checkbox" onclick="checkDiet()"> Diet
+                <div class="filterList" id="dietList">
+                    <ul>
+                        <li><input type="checkbox"> Herbivore</li>
+                        <li><input type="checkbox"> Omnivore</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--SIDEBAR------------------------------------------------------>
+    <!--CONTENT------------------------------------------------------>
+    <div class="content">
+        <div>
+            <div id="title" class="title">Chimpanzee</div>
+            <div class="reviewNum">(5.0)</div>
+            <div class="review">
+                <input type="checkbox" class="fa fa-star" onclick="star(1)"></input>
+                <input type="checkbox" class="fa fa-star" onclick="star(2)"></input>
+                <input type="checkbox" class="fa fa-star" onclick="star(3)"></input>
+                <input type="checkbox" class="fa fa-star" onclick="star(4)"></input>
+                <input type="checkbox" class="fa fa-star" onclick="star(5)"></input>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div class="content2">
+            <img class="monkeyImg" src="images/chimpanzee_03.jpg">
+            <div class="scrollImg">
+                <button onclick="sLeft()"><label class="arrow left"></label></button>
+                <button onclick="scrollRight()"><label class="arrow right"></label></button>
+            </div>
+            <div class="information">
+                <div class="infoTitle">Monkey Information</div>
+                <div class="infoLeft">
+                    <ul class="defaultText">
+                        <li>Region:</li>
+                        <li>Species:</li>
+                        <li>Diet:</li>
+                    </ul>
+                </div>
+                <div class="infoRight">
+                    <ul class="defaultText">
+                        <li>Africa</li>
+                        <li>Great Apes</li>
+                        <li>Omnivore</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content3">
+            <div class="descriptionTitle">About</div>
+            <div class="description">Chimpanzees, also known as “Chimps” in American Slang, are very cool animals. They
+                are larger and smarter than your average monkey. People share approximately 95-98% of DNA with
+                Chimpanzees. Chimps are the monkey with the longest possible life-span, the oldest ever chimpanzee to
+                live named “Little Mama”, was alive for around 75-80 years and sadly passed away on November 14, 2017.
+                “Little Mama” was best known as a professional ice skater. Chimpanzees are very handy creatures. Chimps
+                are also special because have the ability to use tools such as hammers and sticks since they got two big
+                thumbs like you.
+            </div>
+        </div>
+    </div>
+    <!--CONTENT------------------------------------------------------>
+    <script>
+        // Function to get query parameters from the URL
+        function getQueryParam(param) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the data from the query parameter
+        var receivedData = getQueryParam("data");
+
+        // Use the received data as needed
+        console.log("Received data:", receivedData);
+    </script>
+</body>
+
+</html>
