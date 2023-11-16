@@ -57,7 +57,8 @@ label.logo img {
     width: 270px;
     background: rgb(231, 231, 231);
     font-size: 25px;
-    height: 650px;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 .sidebar header {
