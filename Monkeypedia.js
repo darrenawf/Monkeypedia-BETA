@@ -1,12 +1,22 @@
 /*
 Type here
 */
+/*GLOBAL VARIABLES====================================*/
 var chimpanzeeImg = [
     "images/chimpanzee_03.jpg",
     "images/chimpanzee_01.jpg",
     "images/chimpanzee_02.jpg",
 ];
 var scrollImg = 0;
+/*CHANGE MONKEY========================================
+function monkeyType(){
+    alert("HEY");
+    // Get the data you want to send
+    var dataToSend = document.getElementById("title").value;
+    // Navigate to the receiver page with the data as a query parameter
+    window.location.href = "receiver.html?data=" + encodeURIComponent(dataToSend);
+}
+*/
 /*SLIDE IMAGES========================================*/
 function sLeft() {
     scrollImg--;

@@ -59,13 +59,22 @@
     <div class="content">
         <div class="title">All Monkeys</div>
         <ul class="monkeyList">
-            <a class="monkeyLink" href="ayeAye.html">Aye-aye</a>
-            <a class="monkeyLink" href="baboon.html">Baboon</a>
+            <a class="monkeyLink" href="">Aye-aye</a>
+            <a onclick="monkeyType()" class="monkeyLink" href="#">Baboon</a>
+            <script>
+                function monkeyType() {
+                    // Get the data you want to send
+                    var dataToSend = "Hello from sender page";
+
+                    // Navigate to the receiver page with the data as a query parameter
+                    window.location.href = "chimpanzee.html?data=" + encodeURIComponent(dataToSend);
+                }
+            </script>
             <a class="monkeyLink" href="chimpanzee.html">Chimpanzee</a>
-            <a class="monkeyLink" href="douc.html">Douc</a>
-            <a class="monkeyLink" href="fingerMonkey.html">Finger Monkey</a>
-            <a class="monkeyLink" href="gorilla.html">Gorilla</a>
-            <a class="monkeyLink" href="indri.html">Indri</a>
+            <a class="monkeyLink" href="">Douc</a>
+            <a class="monkeyLink" href="">Finger Monkey</a>
+            <a class="monkeyLink" href="">Gorilla</a>
+            <a class="monkeyLink" href="">Indri</a>
             <a class="monkeyLink" href="japaneseMacaque.html">Japanese Macaque</a>
             <a class="monkeyLink" href="larGibbon.html">Lar Gibbon</a>
             <a class="monkeyLink" href="mandrill.html">Mandrill</a>
