@@ -2,32 +2,47 @@
 Type here
 */
 /*GLOBAL VARIABLES====================================*/
-var monkeyArray = ["Aye-aye Lemur", "Baboon", "Chimpanzee", "Douc", "Finger Monkey", "Gorilla", "Indri Lemur", "Japanese Macaque", "Lar Gibbon", "Mandrill", "Orangutan", "Proboscis", "Siamang", "Snub-Nosed Monkey", "Spider Monkey", "Squirrel Monkey", "Woolly Monkey"];
+var monkeyArray = ["Aye-aye Lemur", "Baboon", "Chimpanzee", "Red-Shanked Douc", "Finger Monkey", "Gorilla", "Indri Lemur", "Japanese Macaque", "Lar Gibbon", "Mandrill", "Orangutan", "Proboscis", "Ring-Tailed Lemur", "Siamang", "Snub-Nosed Monkey", "Spider Monkey", "Squirrel Monkey", "Woolly Monkey"];
 var monkeyImgArr = [
-    ["images/aye-aye_01.jpg",
-        "images/aye-aye_02.jpg",
-        "images/aye-aye_03.jpg"],
+    ["images/ayeAye_02.jpg",
+        "images/ayeAye_01.jpg",
+        "images/ayeAye_03.jpg"],
     ["images/baboon_03.jpg",
         "images/baboon_02.jpg",
         "images/baboon_01.jpg"],
     [
-        "images/chimpanzee_03.jpg",
         "images/chimpanzee_01.jpg",
+        "images/chimpanzee_03.jpg",
         "images/chimpanzee_02.jpg"],
     [
+        "images/douc_04.jpg",
         "images/douc_01.jpg",
-        "images/douc_02.jpg",
-        "images/douc_03.jpg"]
+        "images/douc_02.jpg"],
+    ["images/fingerMonkey_01.jpg",
+        "images/fingerMonkey_02.jpg",
+        "images/fingerMonkey_03.jpg",],
+    ["images/gorilla_01.jpg",
+        "images/gorilla_02.jpg",
+        "images/gorilla_04.jpg",],
+    ["images/indriLemur_01.jpg",
+        "images/indriLemur_02.jpg",
+        "images/indriLemur_03.jpg",],
+    ["images/japaneseMacaque_01.jpg",
+        "images/japaneseMacaque_02.jpg",
+        "images/japaneseMacaque_03.jpg",],
+    ["images/larGibbon_02.jpg",
+        "images/larGibbon_01.jpg",
+        "images/larGibbon_03.jpg",]
 ];
 var monkeyInfo = [
-    ["Africa", "Africa", "Africa", "Asia", "Latin America", "Africa", "Africa", "Asia", "Asia", "Africa", "Asia", "Asia", "Asia", "Asia", "Latin America", "Latin America", "Latin America"],
-    ["Lemur", "Cercopithecidae", "Great Ape", "Cercopithecidae", "Marmoset", "Great Ape", "Lemur", "Cercopithecidae", "Gibbon", "Cercopithecidae", "Great Ape", "Cercopithecidae", "Gibbon", "Cercopithecidae", "Atelidae", "Cebidae", "Atelidae"],
-    ["Omnivore", "Herbivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "herbivore", "Omnivore", "Omnivore"]
+    ["Africa", "Africa", "Africa", "Asia", "Latin America", "Africa", "Africa", "Asia", "Asia", "Africa", "Asia", "Asia", "Africa", "Asia", "Asia", "Latin America", "Latin America", "Latin America"],
+    ["Lemur", "Cercopithecidae", "Great Ape", "Cercopithecidae", "Marmoset", "Great Ape", "Lemur", "Cercopithecidae", "Gibbon", "Cercopithecidae", "Great Ape", "Cercopithecidae", "Lemur", "Gibbon", "Cercopithecidae", "Atelidae", "Cebidae", "Atelidae"],
+    ["Omnivore", "Herbivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Omnivore"]
 ]
 var monkeyDesc = [
     [],
     [],
-    ['Chimpanzees, also known as "Chimps" in American Slang, are very cool animals. They are larger and smarter than your average monkey. People share approximately 95-98% of DNA with Chimpanzees. Chimps are the monkey with the longest possible life - span, the oldest ever chimpanzee to live named "Little Mama", was alive for around 75 - 80 years and sadly passed away on November 14, 2017. "Little Mama" was best known as a professional ice skater. Chimpanzees are very handy creatures. Chimps are also special because have the ability to use tools such as hammers and sticks since they got two big thumbs like you.']
+    ['Chimpanzees, also known as "Chimps" in American Slang, are very cool animals. They are larger and smarter than your average monkey. People share approximately 95-98% of DNA with Chimpanzees. Chimps are the monkey with the longest possible life-span, the oldest ever chimpanzee to live named "Little Mama", was alive for around 75 - 80 years and sadly passed away on November 14, 2017. "Little Mama" was best known as a professional ice skater. Chimpanzees are very handy creatures. Chimps are also special because have the ability to use tools such as hammers and sticks since they got two big thumbs like you.']
 ]
 var scrollImg = 0;
 /*CHANGE MONKEY=======================================*/
@@ -74,10 +89,12 @@ function checkRegion() { // Region filter checkbox
         document.getElementById("regionList").style.display = 'none';
     }
     //Uncheck other boxes
+    /*
     document.getElementById("checkboxSpecies").checked = false;
     document.getElementById("checkboxDiet").checked = false;
     document.getElementById("speciesList").style.display = "none";
     document.getElementById("dietList").style.display = "none";
+    */
 }
 
 function checkSpecies() { // Diet filter checkbox
@@ -89,10 +106,12 @@ function checkSpecies() { // Diet filter checkbox
         document.getElementById("speciesList").style.display = 'none';
     }
     //Uncheck other boxes
+    /*
     document.getElementById("checkboxRegion").checked = false;
     document.getElementById("checkboxDiet").checked = false;
     document.getElementById("regionList").style.display = "none";
     document.getElementById("dietList").style.display = "none";
+    */
 }
 function checkDiet() { // Diet filter checkbox
     var checkboxRegion = document.getElementById("checkboxDiet");
@@ -103,10 +122,12 @@ function checkDiet() { // Diet filter checkbox
         document.getElementById("dietList").style.display = 'none';
     }
     //Uncheck other boxes
+    /*
     document.getElementById("checkboxRegion").checked = false;
     document.getElementById("checkboxSpecies").checked = false;
     document.getElementById("regionList").style.display = "none";
     document.getElementById("speciesList").style.display = "none";
+    */
 }
 /*FILTERS=============================================*/
 
