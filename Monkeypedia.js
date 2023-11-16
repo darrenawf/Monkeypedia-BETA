@@ -4,19 +4,21 @@ Type here
 /*GLOBAL VARIABLES====================================*/
 var monkeyArray = ["Aye-aye", "Baboon", "Chimpanzee", "Douc", "Finger Monkey", "Gorilla", "Indri", "Japanese Macaque", "Lar Gibbon", "Mandrill", "Orangutan", "Proboscis", "Siamang", "Snub-Nosed Monkey", "Spider Monkey", "Squirrel Monkey", "Woolly Monkey"];
 var monkeyImgArr = [
-    [],
+    ["images/aye-aye_01.jpg",
+        "images/aye-aye_02.jpg",
+        "images/aye-aye_03.jpg"],
     ["images/baboon_01.jpg",
-    "images/baboon_02.jpg",
-    "images/baboon_03.jpg"],
+        "images/baboon_02.jpg",
+        "images/baboon_03.jpg"],
     [
-    "images/chimpanzee_03.jpg",
-    "images/chimpanzee_01.jpg",
-    "images/chimpanzee_02.jpg",]
+        "images/chimpanzee_03.jpg",
+        "images/chimpanzee_01.jpg",
+        "images/chimpanzee_02.jpg",]
 ];
 var monkeyInfo = [
-    ["Africa", "Africa", "Africa", "Asia"],
-    ["Lemurs", "Cercopithecidae", "Great Apes", "Cercopithecidae"],
-    ["Omnivore", "Herbivore", "Omnivore", "Herbivore"]
+    ["Africa", "Africa", "Africa", "Asia", "Latin America", "Africa", "Africa", "Asia", "Asia", "Africa", "Asia", "Asia", "Asia", "Asia", "Latin America", "Latin America", "Latin America"],
+    ["Lemur", "Cercopithecidae", "Great Ape", "Cercopithecidae", "Marmoset", "Great Ape", "Lemur", "Cercopithecidae", "Gibbon", "Cercopithecidae", "Great Ape", "Cercopithecidae", "Gibbon", "Cercopithecidae", "Atelidae", "Cebidae", "Atelidae"],
+    ["Omnivore", "Herbivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "herbivore", "Omnivore", "Omnivore"]
 ]
 var scrollImg = 0;
 /*CHANGE MONKEY=======================================*/
