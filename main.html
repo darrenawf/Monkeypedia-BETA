@@ -7,7 +7,7 @@
     <script src="Monkeypedia.js"></script>
 </head>
 
-<body onload="loadMonkey(receivedData)">
+<body>
     <!--HEADER------------------------------------------------------->
     <nav>
         <label class="logo"><a href="main.html"><img src="images/Monkeypedia_Logo.png">Monkeypedia</a></label>
@@ -56,62 +56,28 @@
     <!--SIDEBAR------------------------------------------------------>
     <!--CONTENT------------------------------------------------------>
     <div class="content">
-        <div>
-            <div id="title" class="title"></div>
-            <div class="reviewNum">(5.0)</div>
-            <div class="review">
-                <input type="checkbox" class="fa fa-star" onclick="star(1)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(2)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(3)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(4)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(5)"></input>
-            </div>
-        </div>
-        <br>
-        <hr>
-        <div class="content2">
-            <img id="monkeyImg" class="monkeyImg" src="#">
-            <div class="scrollImg">
-                <button onclick="sLeft(receivedData)"><label class="arrow left"></label></button>
-                <button onclick="scrollRight(receivedData)"><label class="arrow right"></label></button>
-            </div>
-            <div class="information">
-                <div class="infoTitle">Monkey Information</div>
-                <div class="infoLeft">
-                    <ul class="defaultText">
-                        <li>Region:</li>
-                        <li>Species:</li>
-                        <li>Diet:</li>
-                    </ul>
-                </div>
-                <div class="infoRight">
-                    <ul class="defaultText">
-                        <li id="region"></li>
-                        <li id="species"></li>
-                        <li id="diet"></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="content3">
-            <div class="descriptionTitle">About</div>
-            <div id="description" class="description">
-            </div>
-        </div>
+        <div class="title">All Monkeys</div>
+        <ul class="monkeyList">
+            <a onclick="sendMonkey(0)" class="monkeyLink" href="#">Aye-aye Lemur</a>
+            <a onclick="sendMonkey(1)" class="monkeyLink" href="#">Baboon</a>
+            <a onclick="sendMonkey(2)" class="monkeyLink" href="#">Chimpanzee</a>
+            <a onclick="sendMonkey(3)" class="monkeyLink" href="#">Douc</a>
+            <a onclick="sendMonkey(4)" class="monkeyLink" href="#">Finger Monkey</a>
+            <a onclick="sendMonkey(5)" class="monkeyLink" href="#">Gorilla</a>
+            <a onclick="sendMonkey(6)" class="monkeyLink" href="#">Indri Lemur</a>
+            <a onclick="sendMonkey(7)" class="monkeyLink" href="#">Japanese Macaque</a>
+            <a onclick="sendMonkey(8)" class="monkeyLink" href="#">Lar Gibbon</a>
+            <a onclick="sendMonkey(9)" class="monkeyLink" href="#">Mandrill</a>
+            <a onclick="sendMonkey(10)" class="monkeyLink" href="#">Orangutan</a>
+            <a onclick="sendMonkey(11)" class="monkeyLink" href="#">Proboscis</a>
+            <a onclick="sendMonkey(12)" class="monkeyLink" href="#">Siaming</a>
+            <a onclick="sendMonkey(13)" class="monkeyLink" href="#">Snub-Nosed Monkey</a>
+            <a onclick="sendMonkey(14)" class="monkeyLink" href="#">Spider Monkey</a>
+            <a onclick="sendMonkey(15)" class="monkeyLink" href="#">Squirrel Monkey</a>
+            <a onclick="sendMonkey(16)" class="monkeyLink" href="#">Woolly Monkey</a>
+        </ul>
     </div>
     <!--CONTENT------------------------------------------------------>
-    <script>
-        // Function to get query parameters from the URL
-        function getQueryParam(param) {
-            var urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        // Get the data from the query parameter
-        var receivedData = getQueryParam("data");
-
-        console.log("Received data:", receivedData); //LOG
-    </script>
 </body>
 
 </html>
