@@ -8,7 +8,7 @@ var chimpanzeeImg = [
 ];
 var scrollImg = 0;
 /*SLIDE IMAGES========================================*/
-function scrollLeft() {
+function sLeft() {
     scrollImg--;
     if (scrollImg < 0) {
         scrollImg = chimpanzeeImg.length - 1;

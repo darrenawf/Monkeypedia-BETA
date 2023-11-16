@@ -228,7 +228,7 @@ label.logo img {
     color: rgb(80, 80, 80);
 }
 
-.defaultText{
+.defaultText {
     font-size: 20px;
 }
 
@@ -251,6 +251,47 @@ label.logo img {
     -webkit-transform: rotate(135deg);
 }
 
+/* Information (Sub Image)  --------------------------------------- */
+
 .scrollImg button {
     width: 198px;
+    border-radius: 0px;
+    border: 1px black solid;
+}
+
+.infoTitle {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 25px;
+    background: rgb(231, 231, 231);
+}
+
+.infoLeft {
+    margin-top: 5px;
+    width: 200px;
+    text-align: right;
+    position: absolute;
+}
+
+.information ul li {
+    padding: 0px 3px;
+}
+
+.infoRight {
+    margin-top: 5px;
+    width: 200px;
+    text-align: left;
+    margin-left: 200px;
+}
+
+.information {
+    background: whitesmoke;
+}
+
+.information ul li {
+    margin-bottom: 5px;
+}
+
+.information ul li:nth-child(even) {
+    background: rgb(239, 239, 239);
 }
