@@ -36,9 +36,12 @@ var monkeyImgArr = [
     ["images/mandrill_01.jpg",
         "images/mandrill_02.jpg",
         "images/mandrill_03.jpg",],
-    ["images/orangutan_01.jpg",
-        "images/orangutan_02.jpg",
-        "images/orangutan_03.jpg",]
+    ["images/orangutan_02.jpg",
+        "images/orangutan_01.jpg",
+        "images/orangutan_03.jpg",],
+    ["images/proboscis_01.jpg",
+        "images/proboscis_03.jpg",
+        "images/proboscis_02.jpg",]
 ];
 var monkeyInfo = [
     ["Africa", "Africa", "Africa", "Asia", "Latin America", "Africa", "Africa", "Asia", "Asia", "Africa", "Asia", "Asia", "Africa", "Asia", "Asia", "Latin America", "Latin America", "Latin America"],
