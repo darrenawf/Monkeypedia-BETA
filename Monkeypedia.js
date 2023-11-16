@@ -2,9 +2,9 @@
 Type here
 */
 var chimpanzeeImg = [
+    "images/chimpanzee_03.jpg",
     "images/chimpanzee_01.jpg",
     "images/chimpanzee_02.jpg",
-    "images/chimpanzee_03.jpg",
 ];
 var scrollImg = 0;
 /*SLIDE IMAGES========================================*/
