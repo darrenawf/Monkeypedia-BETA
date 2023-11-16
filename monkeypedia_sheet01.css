@@ -5,6 +5,7 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 /* HEADER ------------------------------------------------- */
@@ -127,12 +128,14 @@ label.logo img {
 .description {
     font-size: 20px;
     background-color: whitesmoke;
-    height: 409px;
-    overflow-y: scroll
+    height: 407px;
+    overflow-y: scroll;
+    padding: 2px 5px;
 }
 
 .content2 {
     position: absolute;
+    
 }
 
 .content3 {
@@ -143,6 +146,7 @@ label.logo img {
 .descriptionTitle {
     font-size: 25px;
     background-color: rgb(239, 239, 239);
+    padding: 2px 5px;
 }
 
 /* STAR REVIEWS -----------------------------------------------*/
@@ -178,11 +182,18 @@ label.logo img {
     color: orange;
     position: absolute;
 }
-
 /* SCREEN ADJUST --------------------------------------------- */
 @media screen and (max-width: 800px) {
     .monkeyOfTheDayClass {
         display: none;
+    }
+    /*collapse about box*/
+    .content2 {
+        position: relative;
+    }
+    .content3 {
+        margin: 15px 20px 0px 0px;
+        width: 400px;
     }
 }
 
@@ -241,6 +252,7 @@ label.logo img {
 
 .defaultText {
     font-size: 20px;
+    overflow-x: visible;
 }
 
 /* ARROWS ------------------------------------------------------ */
