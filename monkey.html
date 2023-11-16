@@ -7,7 +7,7 @@
     <script src="Monkeypedia.js"></script>
 </head>
 
-<body onload="loadMonkey()">
+<body onload="loadMonkey(receivedData)">
     <!--HEADER------------------------------------------------------->
     <nav>
         <label class="logo"><a href="home.html"><img src="images/Monkeypedia_Logo.png">Monkeypedia</a></label>
@@ -70,10 +70,10 @@
         <br>
         <hr>
         <div class="content2">
-            <img class="monkeyImg" src="images/chimpanzee_03.jpg">
+            <img id="monkeyImg" class="monkeyImg" src="#">
             <div class="scrollImg">
-                <button onclick="sLeft()"><label class="arrow left"></label></button>
-                <button onclick="scrollRight()"><label class="arrow right"></label></button>
+                <button onclick="sLeft(receivedData)"><label class="arrow left"></label></button>
+                <button onclick="scrollRight(receivedData)"><label class="arrow right"></label></button>
             </div>
             <div class="information">
                 <div class="infoTitle">Monkey Information</div>
@@ -86,9 +86,9 @@
                 </div>
                 <div class="infoRight">
                     <ul class="defaultText">
-                        <li>Africa</li>
-                        <li>Great Apes</li>
-                        <li>Omnivore</li>
+                        <li id="region">Africa</li>
+                        <li id="species">Great Apes</li>
+                        <li id="diet">Omnivore</li>
                     </ul>
                 </div>
             </div>
@@ -116,8 +116,7 @@
         // Get the data from the query parameter
         var receivedData = getQueryParam("data");
 
-        // Use the received data as needed
-        console.log("Received data:", receivedData);
+        console.log("Received data:", receivedData); //LOG
     </script>
 </body>
 

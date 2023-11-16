@@ -3,38 +3,53 @@ Type here
 */
 /*GLOBAL VARIABLES====================================*/
 var monkeyArray = ["Aye-aye", "Baboon", "Chimpanzee", "Douc", "Finger Monkey", "Gorilla", "Indri", "Japanese Macaque", "Lar Gibbon", "Mandrill", "Orangutan", "Proboscis", "Siamang", "Snub-Nosed Monkey", "Spider Monkey", "Squirrel Monkey", "Woolly Monkey"];
-var chimpanzeeImg = [
+var monkeyImgArr = [
+    [],
+    ["images/baboon_01.jpg",
+    "images/baboon_02.jpg",
+    "images/baboon_03.jpg"],
+    [
     "images/chimpanzee_03.jpg",
     "images/chimpanzee_01.jpg",
-    "images/chimpanzee_02.jpg",
+    "images/chimpanzee_02.jpg",]
 ];
+var monkeyInfo = [
+    ["Africa", "Africa", "Africa", "Asia"],
+    ["Lemurs", "Cercopithecidae", "Great Apes", "Cercopithecidae"],
+    ["Omnivore", "Herbivore", "Omnivore", "Herbivore"]
+]
 var scrollImg = 0;
-function loadMonkey() {
-    document.getElementById("title").innerHTML = "Baboon";
-}
 /*CHANGE MONKEY=======================================*/
-function monkeyFunction(monkeyType) {
-    // Get the data you want to send
-    var dataToSend = monkeyType;
+//Change URL
+function sendMonkey(monkeyType) {
     // Navigate to the receiver page with the data as a query parameter
-    window.location.href = "monkey.html?data=" + encodeURIComponent(dataToSend);
+    window.location.href = "monkey.html?data=" + encodeURIComponent(monkeyType);
+}
+//Change Text
+function loadMonkey(monkeyType) {
+    console.log("monkeyType:", monkeyType); //LOG
+    document.getElementById("title").innerHTML = monkeyArray[monkeyType];
+    document.getElementById("region").innerHTML = monkeyInfo[0][monkeyType];
+    document.getElementById("species").innerHTML = monkeyInfo[1][monkeyType];
+    document.getElementById("diet").innerHTML = monkeyInfo[2][monkeyType];
+    document.getElementById("monkeyImg").src = monkeyImgArr[monkeyType][scrollImg];
 }
 /*SLIDE IMAGES========================================*/
-function sLeft() {
+function sLeft(monkeyType) {
     scrollImg--;
     if (scrollImg < 0) {
-        scrollImg = chimpanzeeImg.length - 1;
+        scrollImg = monkeyImgArr[monkeyType].length - 1;
     }
     var monkeyImg = document.querySelector(".monkeyImg");
-    monkeyImg.src = chimpanzeeImg[scrollImg];
+    monkeyImg.src = monkeyImgArr[monkeyType][scrollImg];
 }
-function scrollRight() {
+function scrollRight(monkeyType) {
     scrollImg++;
-    if (scrollImg >= chimpanzeeImg.length) {
+    if (scrollImg >= monkeyImgArr[monkeyType].length) {
         scrollImg = 0;
     }
     var monkeyImg = document.querySelector(".monkeyImg");
-    monkeyImg.src = chimpanzeeImg[scrollImg];
+    monkeyImg.src = monkeyImgArr[monkeyType][scrollImg];
 }
 /*SLIDE IMAGES========================================*/
 /*FILTERS=============================================*/
