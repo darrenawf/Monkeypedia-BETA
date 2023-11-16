@@ -2,21 +2,23 @@
 Type here
 */
 /*GLOBAL VARIABLES====================================*/
+var monkeyArray = ["Aye-aye", "Baboon", "Chimpanzee", "Douc", "Finger Monkey", "Gorilla", "Indri", "Japanese Macaque", "Lar Gibbon", "Mandrill", "Orangutan", "Proboscis", "Siamang", "Snub-Nosed Monkey", "Spider Monkey", "Squirrel Monkey", "Woolly Monkey"];
 var chimpanzeeImg = [
     "images/chimpanzee_03.jpg",
     "images/chimpanzee_01.jpg",
     "images/chimpanzee_02.jpg",
 ];
 var scrollImg = 0;
-/*CHANGE MONKEY========================================
-function monkeyType(){
-    alert("HEY");
-    // Get the data you want to send
-    var dataToSend = document.getElementById("title").value;
-    // Navigate to the receiver page with the data as a query parameter
-    window.location.href = "receiver.html?data=" + encodeURIComponent(dataToSend);
+function loadMonkey() {
+    document.getElementById("title").innerHTML = "Baboon";
 }
-*/
+/*CHANGE MONKEY=======================================*/
+function monkeyFunction(monkeyType) {
+    // Get the data you want to send
+    var dataToSend = monkeyType;
+    // Navigate to the receiver page with the data as a query parameter
+    window.location.href = "chimpanzee.html?data=" + encodeURIComponent(dataToSend);
+}
 /*SLIDE IMAGES========================================*/
 function sLeft() {
     scrollImg--;
@@ -118,9 +120,6 @@ function createAccount() { //Finish this later when we learn about node.js
 
 
 /*SEARCH=============================================*/
-//include all monkeys here, thanks.
-var monkeyArray = ["Aye-aye", "Baboon", "Chimpanzee", "Douc", "Finger Monkey", "Gorilla", "Indri", "Japanese Macaque", "Lar Gibbon", "Mandrill", "Orangutan", "Proboscis", "Siamang", "Snub-Nosed Monkey", "Spider Monkey", "Squirrel Monkey", "Woolly Monkey"];
-
 function search() {
     var input = document.getElementById("search").value;
     window.location.href = 'search_results.html?input=' + encodeURIComponent(input);
