@@ -41,7 +41,26 @@ var monkeyImgArr = [
         "images/orangutan_03.jpg",],
     ["images/proboscis_01.jpg",
         "images/proboscis_03.jpg",
-        "images/proboscis_02.jpg",]
+        "images/proboscis_02.jpg",],
+    ["images/ringTailedLemur_01.jpg",
+        "images/ringTailedLemur_02.jpg",
+        "images/ringTailedLemur_03.jpg",
+        "images/ringTailedLemur_04.jpg",],
+    ["images/siaming_03.jpg",
+        "images/siaming_02.jpg",
+        "images/siaming_01.jpg",],
+    ["images/snubNosedMonkey_01.jpg",
+        "images/snubNosedMonkey_02.jpg",
+        "images/snubNosedMonkey_03.jpg",],
+    ["images/spiderMonkey_01.jpg",
+        "images/spiderMonkey_02.jpg",
+        "images/spiderMonkey_03.jpg",],
+    ["images/squirrelMonkey_03.jpg",
+        "images/squirrelMonkey_01.jpg",
+        "images/squirrelMonkey_02.jpg",],
+    ["images/woollyMonkey_01.jpg",
+        "images/woollyMonkey_02.jpg",
+        "images/woollyMonkey_03.jpg",]
 ];
 var monkeyInfo = [
     ["Africa", "Africa", "Africa", "Asia", "Latin America", "Africa", "Africa", "Asia", "Asia", "Africa", "Asia", "Asia", "Africa", "Asia", "Asia", "Latin America", "Latin America", "Latin America"],
