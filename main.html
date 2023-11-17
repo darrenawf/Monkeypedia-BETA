@@ -19,16 +19,16 @@
     <!--HEADER------------------------------------------------------->
     <!--SIDEBAR------------------------------------------------------>
     <div class="sidebar">
-        <input class="searchbar" id="search" onchange="search()" type="text" placeholder="Search Monkeys">
+        <input class="searchbar" id="search" type="text" placeholder="Search Monkeys">
         <header>Filters</header>
         <ul>
             <li>
                 <input id="checkboxRegion" type="checkbox" onclick="checkRegion()"> Region
                 <div class="filterList" id="regionList">
                     <ul>
-                        <li><input type="checkbox"> Africa</li>
-                        <li><input type="checkbox"> Asia</li>
-                        <li><input type="checkbox"> Latin America</li>
+                        <li><input value = "Africa" id="africa" onclick="regionSelector(this)" type="checkbox"> Africa</li>
+                        <li><input value = "Asia" id="asia" onclick="regionSelector(this)" type="checkbox"> Asia</li>
+                        <li><input value = "Latin America" id="latinAmerica" onclick="regionSelector(this)" type="checkbox"> Latin America</li>
                     </ul>
                 </div>
             </li>
@@ -37,17 +37,17 @@
 
                 <div class="filterList" id="speciesList">
                     <ul>
-                        <li><input type="checkbox"> Gibbons</li>
-                        <li><input type="checkbox"> Great Apes</li>
-                        <li><input type="checkbox"> Lemurs</li>
+                        <li><input value = "Gibbon" id="gibbons" onclick="speciesSelector(this)" type="checkbox"> Gibbons</li>
+                        <li><input value = "Great Ape" id="greatApes" onclick="speciesSelector(this)" type="checkbox"> Great Apes</li>
+                        <li><input value = "Lemur" id="lemurs" onclick="speciesSelector(this)" type="checkbox"> Lemurs</li>
                     </ul>
                 </div>
             </li>
             <li><input id="checkboxDiet" type="checkbox" onclick="checkDiet()"> Diet
                 <div class="filterList" id="dietList">
                     <ul>
-                        <li><input type="checkbox"> Herbivore</li>
-                        <li><input type="checkbox"> Omnivore</li>
+                        <li><input value = "Herbivore" id="herbivore" onclick="dietSelector(this)" type="checkbox"> Herbivore</li>
+                        <li><input value = "Omnivore" id="omnivore" onclick="dietSelector(this)" type="checkbox"> Omnivore</li>
                     </ul>
                 </div>
             </li>

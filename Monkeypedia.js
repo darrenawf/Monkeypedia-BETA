@@ -116,6 +116,11 @@ function checkRegion() { // Region filter checkbox
     } else {
         document.getElementById("regionList").style.display = 'none';
     }
+
+
+
+
+
     //Uncheck other boxes
     /*
     document.getElementById("checkboxSpecies").checked = false;
@@ -157,6 +162,53 @@ function checkDiet() { // Diet filter checkbox
     document.getElementById("speciesList").style.display = "none";
     */
 }
+
+var region = "Any";
+var species = "Any";
+var diet = "Any";
+
+function regionSelector(object){
+var selector = object;
+   if(document.getElementById(selector.id).checked == true) {
+      document.getElementById("africa").checked = false;
+      document.getElementById("asia").checked = false;
+      document.getElementById("latinAmerica").checked = false;
+      document.getElementById(selector.id).checked = true;
+      region = document.getElementById(selector.id).value;
+   }
+   if (document.getElementById(selector.id).checked == false){
+    region = "Any";
+   }
+}
+function speciesSelector(object){
+    var selector = object;
+       if(document.getElementById(selector.id).checked == true) {
+          document.getElementById("gibbons").checked = false;
+          document.getElementById("greatApes").checked = false;
+          document.getElementById("lemurs").checked = false;
+          document.getElementById(selector.id).checked = true;
+          species = document.getElementById(selector.id).value;
+       }
+       if (document.getElementById(selector.id).checked == false){
+        species = "Any";
+       }
+    }
+
+function dietSelector(object){
+var selector = object;
+   if(document.getElementById(selector.id).checked == true) {
+      document.getElementById("herbivore").checked = false;
+      document.getElementById("omnivore").checked = false;
+      document.getElementById(selector.id).checked = true;
+      diet = document.getElementById(selector.id).value;
+   }
+   if (document.getElementById(selector.id).checked == false){
+    diet = "Any";
+   }
+}
+
+
+
 /*FILTERS=============================================*/
 
 /*ACCOUNT=============================================*/
@@ -196,21 +248,36 @@ function createAccount() { //Finish this later when we learn about node.js
 
 
 /*SEARCH=============================================*/
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      search();
+    }
+  });
+
+
 function search() {
     var input = document.getElementById("search").value;
-    window.location.href = 'search_results.html?input=' + encodeURIComponent(input);
+    window.location.href = 'search_results.html?input=' + encodeURIComponent(input) + "&region=" + encodeURIComponent(region)+ "&species=" + encodeURIComponent(species)+ "&diet=" + encodeURIComponent(diet);
 }
 
-function results(input, monkeyType) {
+function results(input, monkeyRegion, monkeySpecies, monkeyDiet) {
     document.getElementById("resultsTitle").innerHTML = "Search Results for: \"" + input + "\"";
     input = input.toLowerCase();
     var output = "";
     for (i = 0; i < (monkeyArray.length); i++) {
         monkey = monkeyArray[i].toLowerCase(); //I made them both lower case so it's not case sensitive
         if (monkey.includes(input) == true) {
-            link = '"monkey.html?data=' + encodeURIComponent(i) + '"';
-            output = output + "<a class=\"monkeyLink\" href=" + link + ">" + monkeyArray[i] + "</a>" //creates the <a> tag with a working link, Note: The link most likely doesnt work with monkey names with spaces, but I can easily fix that later
+            if(monkeyInfo[0][i] == monkeyRegion || monkeyRegion == "Any"){
+                if(monkeyInfo[1][i] == monkeySpecies || monkeySpecies == "Any"){
+                    if(monkeyInfo[2][i] == monkeyDiet || monkeyDiet == "Any"){
+                        link = '"monkey.html?data=' + encodeURIComponent(i) + '"';
+                        output = output + "<a class=\"monkeyLink\" href=" + link + ">" + monkeyArray[i] + "</a>";
+                    }
+                }
+            }
         }
+        
     }
     document.getElementById("results").innerHTML = output;
 }
