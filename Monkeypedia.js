@@ -116,11 +116,6 @@ function checkRegion() { // Region filter checkbox
     } else {
         document.getElementById("regionList").style.display = 'none';
     }
-
-
-
-
-
     //Uncheck other boxes
     /*
     document.getElementById("checkboxSpecies").checked = false;
@@ -167,44 +162,48 @@ var region = "Any";
 var species = "Any";
 var diet = "Any";
 
-function regionSelector(object){
-var selector = object;
-   if(document.getElementById(selector.id).checked == true) {
-      document.getElementById("africa").checked = false;
-      document.getElementById("asia").checked = false;
-      document.getElementById("latinAmerica").checked = false;
-      document.getElementById(selector.id).checked = true;
-      region = document.getElementById(selector.id).value;
-   }
-   if (document.getElementById(selector.id).checked == false){
-    region = "Any";
-   }
-}
-function speciesSelector(object){
+function regionSelector(object) {
     var selector = object;
-       if(document.getElementById(selector.id).checked == true) {
-          document.getElementById("gibbons").checked = false;
-          document.getElementById("greatApes").checked = false;
-          document.getElementById("lemurs").checked = false;
-          document.getElementById(selector.id).checked = true;
-          species = document.getElementById(selector.id).value;
-       }
-       if (document.getElementById(selector.id).checked == false){
-        species = "Any";
-       }
+    if (document.getElementById(selector.id).checked == true) {
+        document.getElementById("africa").checked = false;
+        document.getElementById("asia").checked = false;
+        document.getElementById("latinAmerica").checked = false;
+        document.getElementById(selector.id).checked = true;
+        region = document.getElementById(selector.id).value;
     }
+    if (document.getElementById(selector.id).checked == false) {
+        region = "Any";
+    }
+}
+function speciesSelector(object) {
+    var selector = object;
+    if (document.getElementById(selector.id).checked == true) {
+        document.getElementById("atelidae").checked = false;
+        document.getElementById("cebidae").checked = false;
+        document.getElementById("cercopithecidae").checked = false;
+        document.getElementById("gibbons").checked = false;
+        document.getElementById("greatApes").checked = false;
+        document.getElementById("lemurs").checked = false;
+        document.getElementById("marmosets").checked = false;
+        document.getElementById(selector.id).checked = true;
+        species = document.getElementById(selector.id).value;
+    }
+    if (document.getElementById(selector.id).checked == false) {
+        species = "Any";
+    }
+}
 
-function dietSelector(object){
-var selector = object;
-   if(document.getElementById(selector.id).checked == true) {
-      document.getElementById("herbivore").checked = false;
-      document.getElementById("omnivore").checked = false;
-      document.getElementById(selector.id).checked = true;
-      diet = document.getElementById(selector.id).value;
-   }
-   if (document.getElementById(selector.id).checked == false){
-    diet = "Any";
-   }
+function dietSelector(object) {
+    var selector = object;
+    if (document.getElementById(selector.id).checked == true) {
+        document.getElementById("herbivore").checked = false;
+        document.getElementById("omnivore").checked = false;
+        document.getElementById(selector.id).checked = true;
+        diet = document.getElementById(selector.id).value;
+    }
+    if (document.getElementById(selector.id).checked == false) {
+        diet = "Any";
+    }
 }
 
 
@@ -249,16 +248,16 @@ function createAccount() { //Finish this later when we learn about node.js
 
 /*SEARCH=============================================*/
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-      search();
+        search();
     }
-  });
+});
 
 
 function search() {
     var input = document.getElementById("search").value;
-    window.location.href = 'search_results.html?input=' + encodeURIComponent(input) + "&region=" + encodeURIComponent(region)+ "&species=" + encodeURIComponent(species)+ "&diet=" + encodeURIComponent(diet);
+    window.location.href = 'search_results.html?input=' + encodeURIComponent(input) + "&region=" + encodeURIComponent(region) + "&species=" + encodeURIComponent(species) + "&diet=" + encodeURIComponent(diet);
 }
 
 function results(input, monkeyRegion, monkeySpecies, monkeyDiet) {
@@ -268,16 +267,16 @@ function results(input, monkeyRegion, monkeySpecies, monkeyDiet) {
     for (i = 0; i < (monkeyArray.length); i++) {
         monkey = monkeyArray[i].toLowerCase(); //I made them both lower case so it's not case sensitive
         if (monkey.includes(input) == true) {
-            if(monkeyInfo[0][i] == monkeyRegion || monkeyRegion == "Any"){
-                if(monkeyInfo[1][i] == monkeySpecies || monkeySpecies == "Any"){
-                    if(monkeyInfo[2][i] == monkeyDiet || monkeyDiet == "Any"){
+            if (monkeyInfo[0][i] == monkeyRegion || monkeyRegion == "Any") {
+                if (monkeyInfo[1][i] == monkeySpecies || monkeySpecies == "Any") {
+                    if (monkeyInfo[2][i] == monkeyDiet || monkeyDiet == "Any") {
                         link = '"monkey.html?data=' + encodeURIComponent(i) + '"';
                         output = output + "<a class=\"monkeyLink\" href=" + link + ">" + monkeyArray[i] + "</a>";
                     }
                 }
             }
         }
-        
+
     }
     document.getElementById("results").innerHTML = output;
 }
