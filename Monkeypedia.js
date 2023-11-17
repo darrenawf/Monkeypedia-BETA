@@ -10,12 +10,10 @@ var monkeyImgArr = [
     ["images/baboon_03.jpg",
         "images/baboon_02.jpg",
         "images/baboon_01.jpg"],
-    [
-        "images/chimpanzee_01.jpg",
+    ["images/chimpanzee_01.jpg",
         "images/chimpanzee_03.jpg",
         "images/chimpanzee_02.jpg"],
-    [
-        "images/douc_04.jpg",
+    ["images/douc_04.jpg",
         "images/douc_01.jpg",
         "images/douc_02.jpg"],
     ["images/fingerMonkey_01.jpg",
