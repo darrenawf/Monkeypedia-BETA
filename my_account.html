@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="monkeypedia_sheet01.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Monkeypedia.js"></script>
+</head>
+
+<body>
+    <!--HEADER------------------------------------------------------->
+    <nav>
+        <label class="logo"><a href="home.html"><img src="images/Monkeypedia_Logo.png">Monkeypedia</a></label>
+        <ul>
+            <li><a class="monkeyOfTheDayClass" href="monkeyOfTheDay.html">Monkey of the Day</a></li>
+            <li><a href="my_account.html"> My Account </a></li>
+        </ul>
+    </nav>
+    <!--HEADER------------------------------------------------------->
+    <!--SIDEBAR------------------------------------------------------>
+    <div class="sidebar">
+        <input class="searchbar" id="search" type="text" placeholder="Search Monkeys">
+        <header>Filters</header>
+        <ul>
+            <li>
+                <input id="checkboxRegion" type="checkbox" onclick="checkRegion()"> Region
+                <div class="filterList" id="regionList">
+                    <ul>
+                        <li><input value = "Africa" id="africa" onclick="regionSelector(this)" type="checkbox"> Africa</li>
+                        <li><input value = "Asia" id="asia" onclick="regionSelector(this)" type="checkbox"> Asia</li>
+                        <li><input value = "Latin America" id="latinAmerica" onclick="regionSelector(this)" type="checkbox"> Latin America</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <input id="checkboxSpecies" type="checkbox" onclick="checkSpecies()"> Species
+
+                <div class="filterList" id="speciesList">
+                    <ul>
+                        <li><input value = "Gibbon" id="gibbons" onclick="speciesSelector(this)" type="checkbox"> Gibbons</li>
+                        <li><input value = "Great Ape" id="greatApes" onclick="speciesSelector(this)" type="checkbox"> Great Apes</li>
+                        <li><input value = "Lemur" id="lemurs" onclick="speciesSelector(this)" type="checkbox"> Lemurs</li>
+                    </ul>
+                </div>
+            </li>
+            <li><input id="checkboxDiet" type="checkbox" onclick="checkDiet()"> Diet
+                <div class="filterList" id="dietList">
+                    <ul>
+                        <li><input value = "Herbivore" id="herbivore" onclick="dietSelector(this)" type="checkbox"> Herbivore</li>
+                        <li><input value = "Omnivore" id="omnivore" onclick="dietSelector(this)" type="checkbox"> Omnivore</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--SIDEBAR------------------------------------------------------>
+    <!--CONTENT------------------------------------------------------>
+</body>
+
+</html>
