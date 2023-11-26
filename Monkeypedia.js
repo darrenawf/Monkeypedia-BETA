@@ -243,22 +243,6 @@ function createAccount() { //Finish this later when we learn about node.js
 
 }
 /*ACCOUNT=============================================*/
-
-/*USERNAME============================================*/
-/*
-<script>
-    function signIn() {
-        // Get the username from the input
-        var username = document.querySelector('.inputBox[type="text"]').value;
-
-        // Store the username in localStorage
-        localStorage.setItem('username', username);
-    }
-</script>
-*/
-/*USERNAME===========================================*/
-
-
 /*SEARCH=============================================*/
 
 document.addEventListener('keydown', function (event) {
