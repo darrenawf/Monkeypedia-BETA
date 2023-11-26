@@ -71,6 +71,7 @@ var monkeyDesc = [
     ['Chimpanzees, also known as "Chimps" in American Slang, are very cool animals. They are larger and smarter than your average monkey. People share approximately 95-98% of DNA with Chimpanzees. Chimps are the monkey with the longest possible life-span, the oldest ever chimpanzee to live named "Little Mama", was alive for around 75 - 80 years and sadly passed away on November 14, 2017. "Little Mama" was best known as a professional ice skater. Chimpanzees are very handy creatures. Chimps are also special because have the ability to use tools such as hammers and sticks since they got two big thumbs like you.']
 ]
 var scrollImg = 0;
+var username = localStorage.getItem("username");
 /*CHANGE MONKEY=======================================*/
 //Change URL
 function sendMonkey(monkeyType) {
