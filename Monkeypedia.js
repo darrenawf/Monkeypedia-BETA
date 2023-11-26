@@ -311,18 +311,22 @@ function dateLoad() {
 }
 /*DATE===============================================*/
 /*STAR_RATING========================================*/
-let hovered = false;
 function star(num) {
     for (i = 1; i <= num; i++) {
         document.getElementsByClassName("fa fa-star")[i-1].checked=true;
     }
 }
+
 function hoverStar(num) {
-    if (!hovered) {
         for (i = 1; i <= num; i++){
             document.getElementsByClassName("fa fa-star")[i-1].checked=true;
         }
-        document.getElementsByClassName("fa fa-star")[i-2].checked=false;
+        resetHover();
+}
+
+function resetHover() {
+    for (i = 1; i <= 5; i++) {
+        document.getElementsByClassName("fa fa-star")[i-1].checked=false;
     }
 }
 /*STAR_RATING========================================*/
