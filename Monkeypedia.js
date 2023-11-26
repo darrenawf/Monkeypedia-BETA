@@ -315,13 +315,15 @@ function star(num) {
     for (i = 1; i <= num; i++) {
         document.getElementsByClassName("fa fa-star")[i-1].checked=true;
     }
+    document.getElementsByClassName("reviewNum").innerHTML="(" + num + ".0)";
 }
 
 function hoverStar(num) {
+        resetHover();
         for (i = 1; i <= num; i++){
             document.getElementsByClassName("fa fa-star")[i-1].checked=true;
         }
-        resetHover();
+        document.getElementsByClassName("reviewNum").innerHTML="(" + num + ".0)";
 }
 
 function resetHover() {
