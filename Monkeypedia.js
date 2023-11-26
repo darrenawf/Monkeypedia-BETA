@@ -75,7 +75,7 @@ var scrollImg = 0;
 //Change URL
 function sendMonkey(monkeyType) {
     // Navigate to the receiver page with the data as a query parameter
-    window.location.href = "monkey.html?data=" + encodeURIComponent(monkeyType);
+    window.location.href = "monkey.html?type=" + encodeURIComponent(monkeyType);
 }
 //Change Text
 function loadMonkey(monkeyType) {
@@ -268,7 +268,7 @@ function results(input, monkeyRegion, monkeySpecies, monkeyDiet) {
             if (monkeyInfo[0][i] == monkeyRegion || monkeyRegion == "Any") {
                 if (monkeyInfo[1][i] == monkeySpecies || monkeySpecies == "Any") {
                     if (monkeyInfo[2][i] == monkeyDiet || monkeyDiet == "Any") {
-                        link = '"monkey.html?data=' + encodeURIComponent(i) + '"';
+                        link = '"monkey.html?type=' + encodeURIComponent(i) + '"';
                         output = output + "<a class=\"monkeyLink\" href=" + link + ">" + monkeyArray[i] + "</a>";
                     }
                 }
@@ -279,3 +279,35 @@ function results(input, monkeyRegion, monkeySpecies, monkeyDiet) {
     document.getElementById("results").innerHTML = output;
 }
 /*SEARCH=============================================*/
+/*DATE===============================================*/
+function dateLoad() {
+    var d = new Date();
+    var dayOfWeek = d.getDay();
+    var month = d.getMonth();
+    var day = d.getDate();
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var motdTitle = ["Harambe", "Orangutan Fisherman", "Donkey Kong", "You", "Curious George", "King Kong Balls", "Zooboomafoo"]
+    var motdImg = ["images/harambe_01.jpg", "images/fisherman_01.jpg", "images/donkeyKong_01.jpg", "images/you_01.jpg", "images/curiousGeorge_01.jpg", "images/kingKongBalls_01.jpg", "images/zooboomafoo_01.jpg"];
+    var motdInfo = [
+        ["Cincinnati Zoo", "Shore", "DK Island", "Unknown", "Big City", "Prague", "Duke Lemur Center"],
+        ["Gorilla", "Orangutan", "Gorilla", "Human", "Chimpanzee", "Chimpanzee", "Coquerel's Sifaka"],
+        ["May 28, 2016", "Fisherman", "Bananas", "Unknown", "Banana", "Big", "Chris & Martin Kratt"]
+    ]
+    var motdInfoLeft = [
+        ["Location: ", "Location: ", "Region: ", "Location: ", "Location: ", "Location: ", "Location: "],
+        ["Race: ", "Race: ", "Race: ", "Race: ", "Race: ", "Race: ", "Race: "],
+        ["Died: ", "Occupation: ", "Fav Food: ", "Died: ", "Fav Food: ", "Size: ", "Best Friends: "]
+    ]
+    document.getElementById("dateId").innerHTML = "Monkey of the Day: " + days[dayOfWeek] + ", " + months[month] + " " + day;
+    document.getElementById("title").innerHTML = motdTitle[dayOfWeek];
+    document.getElementById("region").innerHTML = motdInfo[0][dayOfWeek];
+    document.getElementById("species").innerHTML = motdInfo[1][dayOfWeek];
+    document.getElementById("diet").innerHTML = motdInfo[2][dayOfWeek];
+    document.getElementById("regionLeft").innerHTML = motdInfoLeft[0][dayOfWeek];
+    document.getElementById("speciesLeft").innerHTML = motdInfoLeft[1][dayOfWeek];
+    document.getElementById("dietLeft").innerHTML = motdInfoLeft[2][dayOfWeek];
+    document.getElementById("monkeyImg").src = motdImg[dayOfWeek];
+    document.getElementById("description").innerHTML = monkeyDesc[monkeyType];
+}
+/*DATE===============================================*/

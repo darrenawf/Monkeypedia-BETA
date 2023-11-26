@@ -9,7 +9,7 @@
     <title>Monkeypedia</title>
 </head>
 
-<body onload="loadMonkey(receivedData)">
+<body onload="dateLoad()">
     <!--HEADER------------------------------------------------------->
     <nav>
         <label class="logo"><a href="main.html"><img src="images/Monkeypedia_Logo.png">Monkeypedia</a></label>
@@ -28,9 +28,11 @@
                 <input id="checkboxRegion" type="checkbox" onclick="checkRegion()"> Region
                 <div class="filterList" id="regionList">
                     <ul>
-                        <li><input value = "Africa" id="africa" onclick="regionSelector(this)" type="checkbox"> Africa</li>
-                        <li><input value = "Asia" id="asia" onclick="regionSelector(this)" type="checkbox"> Asia</li>
-                        <li><input value = "Latin America" id="latinAmerica" onclick="regionSelector(this)" type="checkbox"> Latin America</li>
+                        <li><input value="Africa" id="africa" onclick="regionSelector(this)" type="checkbox"> Africa
+                        </li>
+                        <li><input value="Asia" id="asia" onclick="regionSelector(this)" type="checkbox"> Asia</li>
+                        <li><input value="Latin America" id="latinAmerica" onclick="regionSelector(this)"
+                                type="checkbox"> Latin America</li>
                     </ul>
                 </div>
             </li>
@@ -39,21 +41,30 @@
 
                 <div class="filterList" id="speciesList">
                     <ul>
-                        <li><input value = "Atelidae" id="atelidae" onclick="speciesSelector(this)" type="checkbox"> Atelidae</li>
-                        <li><input value = "Cebidae" id="cebidae" onclick="speciesSelector(this)" type="checkbox"> Cebidae</li>
-                        <li><input value = "Cercopithecidae" id="cercopithecidae" onclick="speciesSelector(this)" type="checkbox"> Cercopithecidae</li>
-                        <li><input value = "Gibbon" id="gibbons" onclick="speciesSelector(this)" type="checkbox"> Gibbons</li>
-                        <li><input value = "Great Ape" id="greatApes" onclick="speciesSelector(this)" type="checkbox"> Great Apes</li>
-                        <li><input value = "Lemur" id="lemurs" onclick="speciesSelector(this)" type="checkbox"> Lemurs</li>
-                        <li><input value = "Marmosets" id="marmosets" onclick="speciesSelector(this)" type="checkbox"> Marmosets</li>
+                        <li><input value="Atelidae" id="atelidae" onclick="speciesSelector(this)" type="checkbox">
+                            Atelidae</li>
+                        <li><input value="Cebidae" id="cebidae" onclick="speciesSelector(this)" type="checkbox"> Cebidae
+                        </li>
+                        <li><input value="Cercopithecidae" id="cercopithecidae" onclick="speciesSelector(this)"
+                                type="checkbox"> Cercopithecidae</li>
+                        <li><input value="Gibbon" id="gibbons" onclick="speciesSelector(this)" type="checkbox"> Gibbons
+                        </li>
+                        <li><input value="Great Ape" id="greatApes" onclick="speciesSelector(this)" type="checkbox">
+                            Great Apes</li>
+                        <li><input value="Lemur" id="lemurs" onclick="speciesSelector(this)" type="checkbox"> Lemurs
+                        </li>
+                        <li><input value="Marmosets" id="marmosets" onclick="speciesSelector(this)" type="checkbox">
+                            Marmosets</li>
                     </ul>
                 </div>
             </li>
             <li><input id="checkboxDiet" type="checkbox" onclick="checkDiet()"> Diet
                 <div class="filterList" id="dietList">
                     <ul>
-                        <li><input value = "Herbivore" id="herbivore" onclick="dietSelector(this)" type="checkbox"> Herbivore</li>
-                        <li><input value = "Omnivore" id="omnivore" onclick="dietSelector(this)" type="checkbox"> Omnivore</li>
+                        <li><input value="Herbivore" id="herbivore" onclick="dietSelector(this)" type="checkbox">
+                            Herbivore</li>
+                        <li><input value="Omnivore" id="omnivore" onclick="dietSelector(this)" type="checkbox"> Omnivore
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -64,14 +75,7 @@
     <div class="content">
         <div>
             <div id="title" class="title">Monkey of the Day</div>
-            <div class="reviewNum">(5.0)</div>
-            <div class="review">
-                <input type="checkbox" class="fa fa-star" onclick="star(1)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(2)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(3)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(4)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(5)"></input>
-            </div>
+            <div class="dateClass" id="dateId">a</div>
         </div>
         <br>
         <hr>
@@ -85,9 +89,9 @@
                 <div class="infoTitle">Monkey Information</div>
                 <div class="infoLeft">
                     <ul class="defaultText">
-                        <li>Region:</li>
-                        <li>Species:</li>
-                        <li>Diet:</li>
+                        <li id="regionLeft">Region:</li>
+                        <li id="speciesLeft">Monkey:</li>
+                        <li id="dietLeft">Died:</li>
                     </ul>
                 </div>
                 <div class="infoRight">

@@ -134,7 +134,7 @@ label.logo img {
 
 .content2 {
     position: absolute;
-    
+
 }
 
 .content3 {
@@ -182,15 +182,18 @@ label.logo img {
     color: orange;
     position: absolute;
 }
+
 /* SCREEN ADJUST --------------------------------------------- */
 @media screen and (max-width: 800px) {
     .monkeyOfTheDayClass {
         display: none;
     }
+
     /*collapse about box*/
     .content2 {
         position: relative;
     }
+
     .content3 {
         margin: 15px 20px 0px 0px;
         width: 400px;
@@ -318,4 +321,9 @@ label.logo img {
 
 .information ul li:nth-child(even) {
     background: rgb(239, 239, 239);
+}
+
+/* DATE --------------------------------------------------*/
+.dateClass {
+    font-size: 25px;
 }
