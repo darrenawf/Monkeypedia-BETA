@@ -311,19 +311,27 @@ function dateLoad() {
 }
 /*DATE===============================================*/
 /*STAR_RATING========================================*/
-function star(num) {
-    for (i = 1; i <= num; i++) {
+hovered = false;
+function star(starNum) {
+    for (i = 1; i <= starNum; i++) {
         document.getElementsByClassName("fa fa-star")[i-1].checked=true;
     }
-    document.getElementsByClassName("reviewNum").innerHTML="(" + num + ".0)";
+    document.getElementsByClassName("reviewNum").innerHTML="(" + starNum + ".0)";
+    hovered = true;
 }
 
-function hoverStar(num) {
+function hoveronStar(starNum) {
         resetHover();
-        for (i = 1; i <= num; i++){
+        for (i = 1; i <= starNum; i++){
             document.getElementsByClassName("fa fa-star")[i-1].checked=true;
         }
-        document.getElementsByClassName("reviewNum").innerHTML="(" + num + ".0)";
+        document.getElementsByClassName("reviewNum").innerHTML="(" + starNum + ".0)";
+        hovered = false;
+}
+function hoveroffStar() {
+    if (!hovered) {
+        resetHover();
+    }
 }
 
 function resetHover() {
