@@ -316,7 +316,7 @@ function star(starNum) {
     for (i = 1; i <= starNum; i++) {
         document.getElementsByClassName("fa fa-star")[i-1].checked=true;
     }
-    document.getElementsByClassName("reviewNum").innerHTML="(" + starNum + ".0)";
+    document.getElementById("starNum").innerHTML= "("+starNum+".0)";
     hovered = true;
 }
 
@@ -325,7 +325,7 @@ function hoveronStar(starNum) {
         for (i = 1; i <= starNum; i++){
             document.getElementsByClassName("fa fa-star")[i-1].checked=true;
         }
-        document.getElementsByClassName("reviewNum").innerHTML="(" + starNum + ".0)";
+        document.getElementById("starNum").innerHTML= "("+starNum+".0)";
         hovered = false;
 }
 function hoveroffStar() {
@@ -338,5 +338,6 @@ function resetHover() {
     for (i = 1; i <= 5; i++) {
         document.getElementsByClassName("fa fa-star")[i-1].checked=false;
     }
+    document.getElementById("starNum").innerHTML= "("+5+".0)";
 }
 /*STAR_RATING========================================*/
