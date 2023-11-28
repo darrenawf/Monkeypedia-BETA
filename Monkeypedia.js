@@ -275,6 +275,26 @@ function results(input, monkeyRegion, monkeySpecies, monkeyDiet) {
         }
 
     }
+    //Display filters applied
+    if (monkeyRegion != "Any") {
+        document.getElementById("filterApplied").innerHTML += monkeyRegion;
+    }
+    if (monkeySpecies != "Any") {
+        if (monkeyRegion != "Any") {
+            document.getElementById("filterApplied").innerHTML += ", "
+        }
+        document.getElementById("filterApplied").innerHTML += monkeySpecies;
+    }
+    if (monkeyDiet != "Any") {
+        if (monkeyRegion != "Any" || monkeySpecies != "Any") {
+            document.getElementById("filterApplied").innerHTML += ", "
+        }
+        document.getElementById("filterApplied").innerHTML += monkeyDiet;
+    }
+    if (monkeyRegion == "Any" && monkeySpecies == "Any" && monkeyDiet == "Any") {
+        document.getElementById("filterApplied").innerHTML += "None";
+    }
+
     document.getElementById("results").innerHTML = output;
 }
 /*SEARCH=============================================*/
@@ -314,19 +334,19 @@ function dateLoad() {
 hovered = false;
 function star(starNum) {
     for (i = 1; i <= starNum; i++) {
-        document.getElementsByClassName("fa fa-star")[i-1].checked=true;
+        document.getElementsByClassName("fa fa-star")[i - 1].checked = true;
     }
-    document.getElementById("starNum").innerHTML= "("+starNum+".0)";
+    document.getElementById("starNum").innerHTML = "(" + starNum + ".0)";
     hovered = true;
 }
 
 function hoveronStar(starNum) {
-        resetHover();
-        for (i = 1; i <= starNum; i++){
-            document.getElementsByClassName("fa fa-star")[i-1].checked=true;
-        }
-        document.getElementById("starNum").innerHTML= "("+starNum+".0)";
-        hovered = false;
+    resetHover();
+    for (i = 1; i <= starNum; i++) {
+        document.getElementsByClassName("fa fa-star")[i - 1].checked = true;
+    }
+    document.getElementById("starNum").innerHTML = "(" + starNum + ".0)";
+    hovered = false;
 }
 function hoveroffStar() {
     if (!hovered) {
@@ -336,8 +356,8 @@ function hoveroffStar() {
 
 function resetHover() {
     for (i = 1; i <= 5; i++) {
-        document.getElementsByClassName("fa fa-star")[i-1].checked=false;
+        document.getElementsByClassName("fa fa-star")[i - 1].checked = false;
     }
-    document.getElementById("starNum").innerHTML= "("+5+".0)";
+    document.getElementById("starNum").innerHTML = "(" + 5 + ".0)";
 }
 /*STAR_RATING========================================*/

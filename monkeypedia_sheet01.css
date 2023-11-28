@@ -327,3 +327,10 @@ label.logo img {
 .dateClass {
     font-size: 25px;
 }
+
+/*Filter Title*/
+.filterApplied {
+    font-size: 25px;
+    color:rgb(80, 80, 80);
+    font-style: italic;
+}
