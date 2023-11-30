@@ -321,17 +321,17 @@ function dateLoad() {
     var day = d.getDate();
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    var motdTitle = ["Harambe", "Orangutan Fisherman", "Donkey Kong", "You", "Curious George", "King Kong Balls", "Zooboomafoo"]
-    var motdImg = ["images/harambe_01.jpg", "images/fisherman_01.jpg", "images/donkeyKong_01.jpg", "images/you_01.jpg", "images/curiousGeorge_01.jpg", "images/kingKongBalls_01.jpg", "images/zooboomafoo_01.jpg"];
+    var motdTitle = ["Harambe", "Orangutan Fisherman", "Donkey Kong", "Monkey Wrench", "Curious George", "King Kong Balls", "Zooboomafoo"]
+    var motdImg = ["images/harambe_01.jpg", "images/fisherman_01.jpg", "images/donkeyKong_01.jpg", "images/monkeyWrench_01.jpg", "images/curiousGeorge_01.jpg", "images/kingKongBalls_01.jpg", "images/zooboomafoo_01.jpg"];
     var motdInfo = [
-        ["Cincinnati Zoo", "Shore", "DK Island", "Unknown", "Big City", "Prague", "Duke Lemur Center"],
-        ["Gorilla", "Orangutan", "Gorilla", "Human", "Chimpanzee", "Chimpanzee", "Coquerel's Sifaka"],
-        ["May 28, 2016", "Fisherman", "Bananas", "Unknown", "Banana", "Big", "Chris & Martin Kratt"]
+        ["Cincinnati Zoo", "Shore", "DK Island", "Garage", "Big City", "Prague", "Duke Lemur Center"],
+        ["Gorilla", "Orangutan", "Gorilla", "Tool", "Chimpanzee", "Chimpanzee", "Coquerel's Sifaka"],
+        ["May 28, 2016", "Fisherman", "Bananas", "Iron", "Banana", "Big", "Chris & Martin Kratt"]
     ]
     var motdInfoLeft = [
-        ["Location: ", "Location: ", "Region: ", "Location: ", "Location: ", "Location: ", "Location: "],
+        ["Location: ", "Location: ", "Region: ", "Region: ", "Location: ", "Location: ", "Location: "],
         ["Race: ", "Race: ", "Race: ", "Race: ", "Race: ", "Race: ", "Race: "],
-        ["Died: ", "Occupation: ", "Fav Food: ", "Died: ", "Fav Food: ", "Size: ", "Best Friends: "]
+        ["Died: ", "Occupation: ", "Fav Food: ", "Material: ", "Fav Food: ", "Size: ", "Best Friends: "]
     ]
     document.getElementById("dateId").innerHTML = "Monkey of the Day: " + days[dayOfWeek] + ", " + months[month] + " " + day;
     document.getElementById("title").innerHTML = motdTitle[dayOfWeek];
