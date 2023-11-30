@@ -19,55 +19,68 @@
         </ul>
     </nav>
     <!--HEADER------------------------------------------------------->
-    <!--SIDEBAR------------------------------------------------------>
-    <div class="sidebar">
-        <input class="searchbar" id="search" type="text" placeholder="Search Monkeys">
-        <header>Filters</header>
-        <ul>
-            <li>
-                <input id="checkboxRegion" type="checkbox" onclick="checkRegion()"> Region
-                <div class="filterList" id="regionList">
-                    <ul>
-                        <li><input value = "Africa" id="africa" onclick="regionSelector(this)" type="checkbox"> Africa</li>
-                        <li><input value = "Asia" id="asia" onclick="regionSelector(this)" type="checkbox"> Asia</li>
-                        <li><input value = "Latin America" id="latinAmerica" onclick="regionSelector(this)" type="checkbox"> Latin America</li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <input id="checkboxSpecies" type="checkbox" onclick="checkSpecies()"> Species
+    <div class="container">
+        <!--SIDEBAR------------------------------------------------------>
+        <div class="sidebar">
+            <input class="searchbar" id="search" type="text" placeholder="Search Monkeys">
+            <header>Filters</header>
+            <ul>
+                <li>
+                    <input id="checkboxRegion" type="checkbox" onclick="checkRegion()"> Region
+                    <div class="filterList" id="regionList">
+                        <ul>
+                            <li><input value="Africa" id="africa" onclick="regionSelector(this)" type="checkbox"> Africa
+                            </li>
+                            <li><input value="Asia" id="asia" onclick="regionSelector(this)" type="checkbox"> Asia</li>
+                            <li><input value="Latin America" id="latinAmerica" onclick="regionSelector(this)"
+                                    type="checkbox"> Latin America</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input id="checkboxSpecies" type="checkbox" onclick="checkSpecies()"> Species
 
-                <div class="filterList" id="speciesList">
-                    <ul>
-                        <li><input value = "Atelidae" id="atelidae" onclick="speciesSelector(this)" type="checkbox"> Atelidae</li>
-                        <li><input value = "Cebidae" id="cebidae" onclick="speciesSelector(this)" type="checkbox"> Cebidae</li>
-                        <li><input value = "Cercopithecidae" id="cercopithecidae" onclick="speciesSelector(this)" type="checkbox"> Cercopithecidae</li>
-                        <li><input value = "Gibbon" id="gibbons" onclick="speciesSelector(this)" type="checkbox"> Gibbons</li>
-                        <li><input value = "Great Ape" id="greatApes" onclick="speciesSelector(this)" type="checkbox"> Great Apes</li>
-                        <li><input value = "Lemur" id="lemurs" onclick="speciesSelector(this)" type="checkbox"> Lemurs</li>
-                        <li><input value = "Marmosets" id="marmosets" onclick="speciesSelector(this)" type="checkbox"> Marmosets</li>
-                    </ul>
-                </div>
-            </li>
-            <li><input id="checkboxDiet" type="checkbox" onclick="checkDiet()"> Diet
-                <div class="filterList" id="dietList">
-                    <ul>
-                        <li><input value = "Herbivore" id="herbivore" onclick="dietSelector(this)" type="checkbox"> Herbivore</li>
-                        <li><input value = "Omnivore" id="omnivore" onclick="dietSelector(this)" type="checkbox"> Omnivore</li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
+                    <div class="filterList" id="speciesList">
+                        <ul>
+                            <li><input value="Atelidae" id="atelidae" onclick="speciesSelector(this)" type="checkbox">
+                                Atelidae</li>
+                            <li><input value="Cebidae" id="cebidae" onclick="speciesSelector(this)" type="checkbox">
+                                Cebidae</li>
+                            <li><input value="Cercopithecidae" id="cercopithecidae" onclick="speciesSelector(this)"
+                                    type="checkbox"> Cercopithecidae</li>
+                            <li><input value="Gibbon" id="gibbons" onclick="speciesSelector(this)" type="checkbox">
+                                Gibbons</li>
+                            <li><input value="Great Ape" id="greatApes" onclick="speciesSelector(this)" type="checkbox">
+                                Great Apes</li>
+                            <li><input value="Lemur" id="lemurs" onclick="speciesSelector(this)" type="checkbox"> Lemurs
+                            </li>
+                            <li><input value="Marmosets" id="marmosets" onclick="speciesSelector(this)" type="checkbox">
+                                Marmosets</li>
+                        </ul>
+                    </div>
+                </li>
+                <li><input id="checkboxDiet" type="checkbox" onclick="checkDiet()"> Diet
+                    <div class="filterList" id="dietList">
+                        <ul>
+                            <li><input value="Herbivore" id="herbivore" onclick="dietSelector(this)" type="checkbox">
+                                Herbivore</li>
+                            <li><input value="Omnivore" id="omnivore" onclick="dietSelector(this)" type="checkbox">
+                                Omnivore</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--SIDEBAR------------------------------------------------------>
+        <!--CONTENT------------------------------------------------------>
+        <div class="content">
+            <div id="resultsTitle" class="title">Search Results</div>
+            <div id="filterApplied" class="filterApplied">Filters Applied: </div>
+            <ul id="results" class="monkeyList">
+            </ul>
+        </div>
+        <!--CONTENT------------------------------------------------------>
     </div>
-    <!--SIDEBAR------------------------------------------------------>
-    <!--CONTENT------------------------------------------------------>
-    <div class="content">
-        <div id="resultsTitle" class="title">Search Results</div>
-        <div id="filterApplied" class="filterApplied">Filters Applied: </div>
-        <ul id="results" class="monkeyList">
-        </ul>
-    </div>
-    <!--CONTENT------------------------------------------------------>
     <!--JAVA SCRIPT-------------------------------------------------->
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -75,32 +88,32 @@
         const regionSearch = urlParams.get('region');
         const speciesSearch = urlParams.get('species');
         const dietSearch = urlParams.get('diet');
-         region = regionSearch;
-         species = speciesSearch;
-         diet = dietSearch;
+        region = regionSearch;
+        species = speciesSearch;
+        diet = dietSearch;
         //re-checks previous filters
-        if(regionSearch != "Any"){
+        if (regionSearch != "Any") {
             document.getElementById("checkboxRegion").checked = true;
             checkRegion();
-        }    
-        if(speciesSearch != "Any"){
+        }
+        if (speciesSearch != "Any") {
             document.getElementById("checkboxSpecies").checked = true;
             checkSpecies();
-            
+
         }
-        if(dietSearch != "Any"){
+        if (dietSearch != "Any") {
             document.getElementById("checkboxDiet").checked = true;
             checkDiet();
         }
         var idFinder = document.querySelectorAll("*");
-        for (let i = 0; i < idFinder.length; i++){
-            if (idFinder[i].value === region){
+        for (let i = 0; i < idFinder.length; i++) {
+            if (idFinder[i].value === region) {
                 document.getElementById(idFinder[i].id).checked = true;
             }
-            if (idFinder[i].value === species){
+            if (idFinder[i].value === species) {
                 document.getElementById(idFinder[i].id).checked = true;
             }
-            if (idFinder[i].value === diet){
+            if (idFinder[i].value === diet) {
                 document.getElementById(idFinder[i].id).checked = true;
             }
         }

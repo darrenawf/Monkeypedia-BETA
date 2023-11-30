@@ -53,12 +53,11 @@ label.logo img {
 
 /* SIDEBAR ------------------------------------------------- */
 .sidebar {
-    position: absolute;
+    position: sticky;
     width: 270px;
     background: rgb(231, 231, 231);
     font-size: 25px;
-    height: 100vh;
-    overflow-y: hidden;
+    flex-shrink: 0;
 }
 
 .sidebar header {
@@ -96,7 +95,9 @@ label.logo img {
 .content {
     margin-top: 30px;
     float: left;
-    margin-left: 300px;
+    margin-left: 40px;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .content .title {
@@ -110,10 +111,9 @@ label.logo img {
     /*All Monkey Links*/
     color: inherit;
     text-decoration: underline;
-    margin-right: 30px;
     width: 220px;
     display: inline-block;
-    margin-top: 20px;
+    margin: 20px 30px 10px 0px;
 }
 
 /* MONKEY CONTENT ---------------------------------------------*/
@@ -195,7 +195,7 @@ label.logo img {
     }
 
     .content3 {
-        margin: 15px 20px 0px 0px;
+        margin: 15px 20px 15px 0px;
         width: 400px;
     }
 }
@@ -333,4 +333,9 @@ label.logo img {
     font-size: 25px;
     color:rgb(80, 80, 80);
     font-style: italic;
+}
+
+.container {
+    overflow: hidden;
+    display: flex;
 }

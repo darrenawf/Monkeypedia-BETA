@@ -19,6 +19,7 @@
         </ul>
     </nav>
     <!--HEADER------------------------------------------------------->
+    <div class="container">
     <!--SIDEBAR------------------------------------------------------>
     <div class="sidebar">
         <input class="searchbar" id="search" type="text" placeholder="Search Monkeys">
@@ -28,9 +29,11 @@
                 <input id="checkboxRegion" type="checkbox" onclick="checkRegion()"> Region
                 <div class="filterList" id="regionList">
                     <ul>
-                        <li><input value = "Africa" id="africa" onclick="regionSelector(this)" type="checkbox"> Africa</li>
-                        <li><input value = "Asia" id="asia" onclick="regionSelector(this)" type="checkbox"> Asia</li>
-                        <li><input value = "Latin America" id="latinAmerica" onclick="regionSelector(this)" type="checkbox"> Latin America</li>
+                        <li><input value="Africa" id="africa" onclick="regionSelector(this)" type="checkbox"> Africa
+                        </li>
+                        <li><input value="Asia" id="asia" onclick="regionSelector(this)" type="checkbox"> Asia</li>
+                        <li><input value="Latin America" id="latinAmerica" onclick="regionSelector(this)"
+                                type="checkbox"> Latin America</li>
                     </ul>
                 </div>
             </li>
@@ -39,73 +42,90 @@
 
                 <div class="filterList" id="speciesList">
                     <ul>
-                        <li><input value = "Atelidae" id="atelidae" onclick="speciesSelector(this)" type="checkbox"> Atelidae</li>
-                        <li><input value = "Cebidae" id="cebidae" onclick="speciesSelector(this)" type="checkbox"> Cebidae</li>
-                        <li><input value = "Cercopithecidae" id="cercopithecidae" onclick="speciesSelector(this)" type="checkbox"> Cercopithecidae</li>
-                        <li><input value = "Gibbon" id="gibbons" onclick="speciesSelector(this)" type="checkbox"> Gibbons</li>
-                        <li><input value = "Great Ape" id="greatApes" onclick="speciesSelector(this)" type="checkbox"> Great Apes</li>
-                        <li><input value = "Lemur" id="lemurs" onclick="speciesSelector(this)" type="checkbox"> Lemurs</li>
-                        <li><input value = "Marmosets" id="marmosets" onclick="speciesSelector(this)" type="checkbox"> Marmosets</li>
+                        <li><input value="Atelidae" id="atelidae" onclick="speciesSelector(this)" type="checkbox">
+                            Atelidae</li>
+                        <li><input value="Cebidae" id="cebidae" onclick="speciesSelector(this)" type="checkbox"> Cebidae
+                        </li>
+                        <li><input value="Cercopithecidae" id="cercopithecidae" onclick="speciesSelector(this)"
+                                type="checkbox"> Cercopithecidae</li>
+                        <li><input value="Gibbon" id="gibbons" onclick="speciesSelector(this)" type="checkbox"> Gibbons
+                        </li>
+                        <li><input value="Great Ape" id="greatApes" onclick="speciesSelector(this)" type="checkbox">
+                            Great Apes</li>
+                        <li><input value="Lemur" id="lemurs" onclick="speciesSelector(this)" type="checkbox"> Lemurs
+                        </li>
+                        <li><input value="Marmosets" id="marmosets" onclick="speciesSelector(this)" type="checkbox">
+                            Marmosets</li>
                     </ul>
                 </div>
             </li>
             <li><input id="checkboxDiet" type="checkbox" onclick="checkDiet()"> Diet
                 <div class="filterList" id="dietList">
                     <ul>
-                        <li><input value = "Herbivore" id="herbivore" onclick="dietSelector(this)" type="checkbox"> Herbivore</li>
-                        <li><input value = "Omnivore" id="omnivore" onclick="dietSelector(this)" type="checkbox"> Omnivore</li>
+                        <li><input value="Herbivore" id="herbivore" onclick="dietSelector(this)" type="checkbox">
+                            Herbivore</li>
+                        <li><input value="Omnivore" id="omnivore" onclick="dietSelector(this)" type="checkbox"> Omnivore
+                        </li>
                     </ul>
                 </div>
             </li>
         </ul>
     </div>
     <!--SIDEBAR------------------------------------------------------>
-    <!--CONTENT------------------------------------------------------>
-    <div class="content">
-        <div>
-            <div id="title" class="title"></div>
-            <div class="reviewNum"><p id="starNum">(5.0)</div>
-            <div class="review">
-                <input type="checkbox" class="fa fa-star" onclick="star(1)" onmouseover="hoveronStar(1)" onmouseleave="hoveroffStar(1)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(2)" onmouseover="hoveronStar(2)" onmouseleave="hoveroffStar(2)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(3)" onmouseover="hoveronStar(3)" onmouseleave="hoveroffStar(3)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(4)" onmouseover="hoveronStar(4)" onmouseleave="hoveroffStar(4)"></input>
-                <input type="checkbox" class="fa fa-star" onclick="star(5)" onmouseover="hoveronStar(5)" onmouseleave="hoveroffStar(5)"></input>
-            </div>
-        </div>
-        <br>
-        <hr>
-        <div class="content2">
-            <img id="monkeyImg" class="monkeyImg" src="#">
-            <div class="scrollImg">
-                <button onclick="sLeft(receivedData)"><label class="arrow left"></label></button>
-                <button onclick="scrollRight(receivedData)"><label class="arrow right"></label></button>
-            </div>
-            <div class="information">
-                <div class="infoTitle">Monkey Information</div>
-                <div class="infoLeft">
-                    <ul class="defaultText">
-                        <li>Region:</li>
-                        <li>Species:</li>
-                        <li>Diet:</li>
-                    </ul>
+        <!--CONTENT------------------------------------------------------>
+        <div class="content">
+            <div>
+                <div id="title" class="title"></div>
+                <div class="reviewNum">
+                    <p id="starNum">(0.0)
                 </div>
-                <div class="infoRight">
-                    <ul class="defaultText">
-                        <li id="region"></li>
-                        <li id="species"></li>
-                        <li id="diet"></li>
-                    </ul>
+                <div class="review">
+                    <input type="checkbox" class="fa fa-star" onclick="star(1)" onmouseover="hoveronStar(1)"
+                        onmouseleave="hoveroffStar(1)"></input>
+                    <input type="checkbox" class="fa fa-star" onclick="star(2)" onmouseover="hoveronStar(2)"
+                        onmouseleave="hoveroffStar(2)"></input>
+                    <input type="checkbox" class="fa fa-star" onclick="star(3)" onmouseover="hoveronStar(3)"
+                        onmouseleave="hoveroffStar(3)"></input>
+                    <input type="checkbox" class="fa fa-star" onclick="star(4)" onmouseover="hoveronStar(4)"
+                        onmouseleave="hoveroffStar(4)"></input>
+                    <input type="checkbox" class="fa fa-star" onclick="star(5)" onmouseover="hoveronStar(5)"
+                        onmouseleave="hoveroffStar(5)"></input>
                 </div>
             </div>
-        </div>
-        <div class="content3">
-            <div class="descriptionTitle">About</div>
-            <div id="description" class="description">
+            <br>
+            <hr>
+            <div class="content2">
+                <img id="monkeyImg" class="monkeyImg" src="#">
+                <div class="scrollImg">
+                    <button onclick="sLeft(receivedData)"><label class="arrow left"></label></button>
+                    <button onclick="scrollRight(receivedData)"><label class="arrow right"></label></button>
+                </div>
+                <div class="information">
+                    <div class="infoTitle">Monkey Information</div>
+                    <div class="infoLeft">
+                        <ul class="defaultText">
+                            <li>Region:</li>
+                            <li>Species:</li>
+                            <li>Diet:</li>
+                        </ul>
+                    </div>
+                    <div class="infoRight">
+                        <ul class="defaultText">
+                            <li id="region"></li>
+                            <li id="species"></li>
+                            <li id="diet"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content3">
+                <div class="descriptionTitle">About</div>
+                <div id="description" class="description">
+                </div>
             </div>
         </div>
+        <!--CONTENT------------------------------------------------------>
     </div>
-    <!--CONTENT------------------------------------------------------>
     <!--JAVA SCRIPT-------------------------------------------------->
     <script>
         // Function to get query parameters from the URL

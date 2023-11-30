@@ -66,9 +66,12 @@ var monkeyInfo = [
     ["Omnivore", "Herbivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Herbivore", "Omnivore", "Omnivore", "Omnivore"]
 ]
 var monkeyDesc = [
+    ['These hideous creatures look stupid. Aye-aye Lemurs are nocturnal "monkeys" that are native to the island of madagascar. They are the worlds largest nocturnal primate. What looks the most stupid about them is how their eyes can never focus and drift in opposite directions. They have a special thing middle finger which is very long and looks very snapable. This finger is used for tapping on trees to locate hollow chambers where insect larvae hide. Their diet consist mostly of these bugs that they find in dead wood.'],
+    ['Baboons are very cool animals. They are most well known for their swollen butts. These monkey butts are most prominate on the female baboons so the males know which ones are of age and ready to mate. Baboons are very smart creatures, back in the day of Egyptian mythology, the god of wisdom was a baboon. There are many many different types of baboons. The first image is a Hamadryas Baboon and the second and third images are Olive Baboons.'],
+    ['Chimpanzees, also known as "Chimps" in American Slang, are very cool animals. They are larger and smarter than your average monkey. People share approximately 95-98% of DNA with Chimpanzees. Chimps are the monkey with the longest possible life-span, the oldest ever chimpanzee to live named "Little Mama", was alive for around 75 - 80 years and sadly passed away on November 14, 2017. "Little Mama" was best known as a professional ice skater. Chimpanzees are very handy creatures. Chimps are also special because have the ability to use tools such as hammers and sticks since they got two big thumbs like you.'],
+    ['The Red-Shanked Douc is a very beautiful creature. From it\'s stunning eyes to its beautiful colourful body, these monkeys are one of the cutest creatures alive. They often communicate by barking, hooting, croacking, and holaring at eachother. Unfortunately, all 3 types of Doucs are critically endangered. They are hunted in the forests of Vietnam and often turned to medicine. Doucs are one of my favourite monkeys and I hope that they do not go extinct any time soon.'],
     [],
     [],
-    ['Chimpanzees, also known as "Chimps" in American Slang, are very cool animals. They are larger and smarter than your average monkey. People share approximately 95-98% of DNA with Chimpanzees. Chimps are the monkey with the longest possible life-span, the oldest ever chimpanzee to live named "Little Mama", was alive for around 75 - 80 years and sadly passed away on November 14, 2017. "Little Mama" was best known as a professional ice skater. Chimpanzees are very handy creatures. Chimps are also special because have the ability to use tools such as hammers and sticks since they got two big thumbs like you.']
 ]
 var scrollImg = 0;
 var username = localStorage.getItem("username");
@@ -358,6 +361,6 @@ function resetHover() {
     for (i = 1; i <= 5; i++) {
         document.getElementsByClassName("fa fa-star")[i - 1].checked = false;
     }
-    document.getElementById("starNum").innerHTML = "(" + 5 + ".0)";
+    document.getElementById("starNum").innerHTML = "(" + 0 + ".0)";
 }
 /*STAR_RATING========================================*/

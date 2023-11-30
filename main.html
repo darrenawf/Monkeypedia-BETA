@@ -19,72 +19,85 @@
         </ul>
     </nav>
     <!--HEADER------------------------------------------------------->
-    <!--SIDEBAR------------------------------------------------------>
-    <div class="sidebar">
-        <input class="searchbar" id="search" type="text" placeholder="Search Monkeys">
-        <header>Filters</header>
-        <ul>
-            <li>
-                <input id="checkboxRegion" type="checkbox" onclick="checkRegion()"> Region
-                <div class="filterList" id="regionList">
-                    <ul>
-                        <li><input value = "Africa" id="africa" onclick="regionSelector(this)" type="checkbox"> Africa</li>
-                        <li><input value = "Asia" id="asia" onclick="regionSelector(this)" type="checkbox"> Asia</li>
-                        <li><input value = "Latin America" id="latinAmerica" onclick="regionSelector(this)" type="checkbox"> Latin America</li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <input id="checkboxSpecies" type="checkbox" onclick="checkSpecies()"> Species
+    <div class="container">
+        <!--SIDEBAR------------------------------------------------------>
+        <div class="sidebar">
+            <input class="searchbar" id="search" type="text" placeholder="Search Monkeys">
+            <header>Filters</header>
+            <ul>
+                <li>
+                    <input id="checkboxRegion" type="checkbox" onclick="checkRegion()"> Region
+                    <div class="filterList" id="regionList">
+                        <ul>
+                            <li><input value="Africa" id="africa" onclick="regionSelector(this)" type="checkbox"> Africa
+                            </li>
+                            <li><input value="Asia" id="asia" onclick="regionSelector(this)" type="checkbox"> Asia</li>
+                            <li><input value="Latin America" id="latinAmerica" onclick="regionSelector(this)"
+                                    type="checkbox"> Latin America</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <input id="checkboxSpecies" type="checkbox" onclick="checkSpecies()"> Species
 
-                <div class="filterList" id="speciesList">
-                    <ul>
-                        <li><input value = "Atelidae" id="atelidae" onclick="speciesSelector(this)" type="checkbox"> Atelidae</li>
-                        <li><input value = "Cebidae" id="cebidae" onclick="speciesSelector(this)" type="checkbox"> Cebidae</li>
-                        <li><input value = "Cercopithecidae" id="cercopithecidae" onclick="speciesSelector(this)" type="checkbox"> Cercopithecidae</li>
-                        <li><input value = "Gibbon" id="gibbons" onclick="speciesSelector(this)" type="checkbox"> Gibbons</li>
-                        <li><input value = "Great Ape" id="greatApes" onclick="speciesSelector(this)" type="checkbox"> Great Apes</li>
-                        <li><input value = "Lemur" id="lemurs" onclick="speciesSelector(this)" type="checkbox"> Lemurs</li>
-                        <li><input value = "Marmosets" id="marmosets" onclick="speciesSelector(this)" type="checkbox"> Marmosets</li>
-                    </ul>
-                </div>
-            </li>
-            <li><input id="checkboxDiet" type="checkbox" onclick="checkDiet()"> Diet
-                <div class="filterList" id="dietList">
-                    <ul>
-                        <li><input value = "Herbivore" id="herbivore" onclick="dietSelector(this)" type="checkbox"> Herbivore</li>
-                        <li><input value = "Omnivore" id="omnivore" onclick="dietSelector(this)" type="checkbox"> Omnivore</li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
+                    <div class="filterList" id="speciesList">
+                        <ul>
+                            <li><input value="Atelidae" id="atelidae" onclick="speciesSelector(this)" type="checkbox">
+                                Atelidae</li>
+                            <li><input value="Cebidae" id="cebidae" onclick="speciesSelector(this)" type="checkbox">
+                                Cebidae</li>
+                            <li><input value="Cercopithecidae" id="cercopithecidae" onclick="speciesSelector(this)"
+                                    type="checkbox"> Cercopithecidae</li>
+                            <li><input value="Gibbon" id="gibbons" onclick="speciesSelector(this)" type="checkbox">
+                                Gibbons</li>
+                            <li><input value="Great Ape" id="greatApes" onclick="speciesSelector(this)" type="checkbox">
+                                Great Apes</li>
+                            <li><input value="Lemur" id="lemurs" onclick="speciesSelector(this)" type="checkbox"> Lemurs
+                            </li>
+                            <li><input value="Marmosets" id="marmosets" onclick="speciesSelector(this)" type="checkbox">
+                                Marmosets</li>
+                        </ul>
+                    </div>
+                </li>
+                <li><input id="checkboxDiet" type="checkbox" onclick="checkDiet()"> Diet
+                    <div class="filterList" id="dietList">
+                        <ul>
+                            <li><input value="Herbivore" id="herbivore" onclick="dietSelector(this)" type="checkbox">
+                                Herbivore</li>
+                            <li><input value="Omnivore" id="omnivore" onclick="dietSelector(this)" type="checkbox">
+                                Omnivore</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--SIDEBAR------------------------------------------------------>
+        <!--CONTENT------------------------------------------------------>
+        <div class="content">
+            <div class="title">All Monkeys</div>
+            <ul class="monkeyList">
+                <a onclick="sendMonkey(0)" class="monkeyLink" href="#">Aye-aye Lemur</a>
+                <a onclick="sendMonkey(1)" class="monkeyLink" href="#">Baboon</a>
+                <a onclick="sendMonkey(2)" class="monkeyLink" href="#">Chimpanzee</a>
+                <a onclick="sendMonkey(3)" class="monkeyLink" href="#">Douc</a>
+                <a onclick="sendMonkey(4)" class="monkeyLink" href="#">Finger Monkey</a>
+                <a onclick="sendMonkey(5)" class="monkeyLink" href="#">Gorilla</a>
+                <a onclick="sendMonkey(6)" class="monkeyLink" href="#">Indri Lemur</a>
+                <a onclick="sendMonkey(7)" class="monkeyLink" href="#">Japanese Macaque</a>
+                <a onclick="sendMonkey(8)" class="monkeyLink" href="#">Lar Gibbon</a>
+                <a onclick="sendMonkey(9)" class="monkeyLink" href="#">Mandrill</a>
+                <a onclick="sendMonkey(10)" class="monkeyLink" href="#">Orangutan</a>
+                <a onclick="sendMonkey(11)" class="monkeyLink" href="#">Proboscis</a>
+                <a onclick="sendMonkey(12)" class="monkeyLink" href="#">Ring-Tailed Lemur</a>
+                <a onclick="sendMonkey(13)" class="monkeyLink" href="#">Siaming</a>
+                <a onclick="sendMonkey(14)" class="monkeyLink" href="#">Snub-Nosed Monkey</a>
+                <a onclick="sendMonkey(15)" class="monkeyLink" href="#">Spider Monkey</a>
+                <a onclick="sendMonkey(16)" class="monkeyLink" href="#">Squirrel Monkey</a>
+                <a onclick="sendMonkey(17)" class="monkeyLink" href="#">Woolly Monkey</a>
+            </ul>
+        </div>
+        <!--CONTENT------------------------------------------------------>
     </div>
-    <!--SIDEBAR------------------------------------------------------>
-    <!--CONTENT------------------------------------------------------>
-    <div class="content">
-        <div class="title">All Monkeys</div>
-        <ul class="monkeyList">
-            <a onclick="sendMonkey(0)" class="monkeyLink" href="#">Aye-aye Lemur</a>
-            <a onclick="sendMonkey(1)" class="monkeyLink" href="#">Baboon</a>
-            <a onclick="sendMonkey(2)" class="monkeyLink" href="#">Chimpanzee</a>
-            <a onclick="sendMonkey(3)" class="monkeyLink" href="#">Douc</a>
-            <a onclick="sendMonkey(4)" class="monkeyLink" href="#">Finger Monkey</a>
-            <a onclick="sendMonkey(5)" class="monkeyLink" href="#">Gorilla</a>
-            <a onclick="sendMonkey(6)" class="monkeyLink" href="#">Indri Lemur</a>
-            <a onclick="sendMonkey(7)" class="monkeyLink" href="#">Japanese Macaque</a>
-            <a onclick="sendMonkey(8)" class="monkeyLink" href="#">Lar Gibbon</a>
-            <a onclick="sendMonkey(9)" class="monkeyLink" href="#">Mandrill</a>
-            <a onclick="sendMonkey(10)" class="monkeyLink" href="#">Orangutan</a>
-            <a onclick="sendMonkey(11)" class="monkeyLink" href="#">Proboscis</a>
-            <a onclick="sendMonkey(12)" class="monkeyLink" href="#">Ring-Tailed Lemur</a>
-            <a onclick="sendMonkey(13)" class="monkeyLink" href="#">Siaming</a>
-            <a onclick="sendMonkey(14)" class="monkeyLink" href="#">Snub-Nosed Monkey</a>
-            <a onclick="sendMonkey(15)" class="monkeyLink" href="#">Spider Monkey</a>
-            <a onclick="sendMonkey(16)" class="monkeyLink" href="#">Squirrel Monkey</a>
-            <a onclick="sendMonkey(17)" class="monkeyLink" href="#">Woolly Monkey</a>
-        </ul>
-    </div>
-    <!--CONTENT------------------------------------------------------>
 </body>
 
 </html>
