@@ -81,9 +81,9 @@ var monkeyDesc = [
     ['Ring-Tailed Lemurs are very charismatic monkeys. They have a beautiful striking appearance with a long bushy tail that is striped with black and white rings. Out of all the monkeys I think that Ring-Tailed Lemurs look the coolest. These monkeys like to engage with eachoter in "Lermur Ballet". During this ritual, they rub their tails scent on their wrists and wave them in the air to spread their scent to establish their territory. "Lemur Ballet" is a battle between the male lemurs to get more of their scent in the air. This attracts the other Lemurs to mate with them and have babies. I love Ring-Tailed Lemurs and they are my favourite lemur.'],
     ['Siamings are very cool monkeys. They got a little ball pocket underneath their mouth, similar to that of an adams apple. These monkeys are most well known for their loud calls to the other monkeys. They sound like "BLEEEEEHEEEEHEH BALABLABLABLABALBLABA". Because their mouth pockets are so large, they can make very large and loud sounds. Siamings are the largest of the Gibbon species. The average Siaming Gibbon is around 1 meter tall, weight about 25-30 pounds.'],
     ['Snub-Nosed Monkeys are like little dudes. They have the ability to stand, eat, and walk just like a dude. My favourite video of a snub nosed monkey is the one who eats an apple like a dude. Thye have little adorable faces. They are found all over asia, ranging from the temperate forests to the snowy mountains. During the winter they like to migrate to the warm rainforest, but during the rest of the year they live in the mountains with elevations of over 9000 feet. These little dudes have beautiful bright orange and golden fur. These are one of my personal favourite monkeys.'],
-    [''],
-    [''],
-    [''],
+    ['Spider monkeys are like spiders, they are black and got long arms and legs and an especially long tail.  Their tail is so long and flexible and strong that it essentially functions as another limb. They are able to grab many things witht that tail. Unlike you and most other monkeys, they are thumbless, however their lack of thumb is made up by their unlack of tail. Similarly to spiders, their diet consists of some bugs. However, they mostly eat fruits, nuts, seeds, and leaves. Spider monkeys are responsible for planting trees due to all the seeds the poop out after eating fruit and seeds.'],
+    ['Squirrel monkeys are like squirrels but monkey. They are very small compared to most monkeys, hence the name and also look like squirrels. They eat nuts too. They are mostly diurnal (active during the day), but some of them are a little nocturnal too (active during the night). These little creatures have assive brains compared to their tiny bodies. They even have their own language consisty of about 25-30 different types of calls. This is useful since they tend to live in troops of up to 300 monkeys.'],
+    ['Woolly monkeys are got thick and dense fur, similar to the wool of a sheep. Their thickness of fur changes based on the season due to temperature and daylight duration. They shed their wool to maintain a regular body temperature. They have the most amount of fur when the are baby making them extra fluffy and warm on the inside. Their abnormally round heads are my favourite aspect of these creature since it makes them look awesome.'],
 ]
 var scrollImg = 0;
 var username = localStorage.getItem("username");
@@ -131,12 +131,6 @@ function checkRegion() { // Region filter checkbox
         document.getElementById("regionList").style.display = 'none';
     }
     //Uncheck other boxes
-    /*
-    document.getElementById("checkboxSpecies").checked = false;
-    document.getElementById("checkboxDiet").checked = false;
-    document.getElementById("speciesList").style.display = "none";
-    document.getElementById("dietList").style.display = "none";
-    */
 }
 
 function checkSpecies() { // Diet filter checkbox
@@ -147,13 +141,6 @@ function checkSpecies() { // Diet filter checkbox
     } else {
         document.getElementById("speciesList").style.display = 'none';
     }
-    //Uncheck other boxes
-    /*
-    document.getElementById("checkboxRegion").checked = false;
-    document.getElementById("checkboxDiet").checked = false;
-    document.getElementById("regionList").style.display = "none";
-    document.getElementById("dietList").style.display = "none";
-    */
 }
 function checkDiet() { // Diet filter checkbox
     var checkboxRegion = document.getElementById("checkboxDiet");
@@ -163,13 +150,6 @@ function checkDiet() { // Diet filter checkbox
     } else {
         document.getElementById("dietList").style.display = 'none';
     }
-    //Uncheck other boxes
-    /*
-    document.getElementById("checkboxRegion").checked = false;
-    document.getElementById("checkboxSpecies").checked = false;
-    document.getElementById("regionList").style.display = "none";
-    document.getElementById("speciesList").style.display = "none";
-    */
 }
 
 var region = "Any";
@@ -223,41 +203,6 @@ function dietSelector(object) {
 
 
 /*FILTERS=============================================*/
-
-/*ACCOUNT=============================================*/
-function createAccount() { //Finish this later when we learn about node.js
-    /*
-
-    var newUser = document.getElementById("newUser").value;
-    var newPass = document.getElementById("newPass").value;
-    alert("newUser");
-    const fs = require('fs');
-
-    let fileUser = fs.readFileSync(usernames.txt).toString();
-    let filePass = fs.readFileSync(passwords.txt).toString();
-    const userArray = fileUser.split("");
-    const passArray = fileUser.split("");
-    
-    for (let i = 0; i < userArray.length;i++){
-        
-        if (userArray[i] == newUser){
-            alert("That username has been taken. Please enter a new username")
-            return;
-        }
-    }
-    alert("Account has been created")
-    userArray.push(newUser);
-    passArray.push(newPass);
-    fileUser = userArray.join("");
-    filePass = passArray.join("");
-    fs.writeFileSync("usernames.txt", fileUser)
-    fs.writeFileSync("passwords.txt", filePass)
-    */
-
-
-
-}
-/*ACCOUNT=============================================*/
 /*SEARCH=============================================*/
 
 document.addEventListener('keydown', function (event) {

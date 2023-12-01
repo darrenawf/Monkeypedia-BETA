@@ -175,8 +175,7 @@ label.logo img {
     visibility: hidden;
 }
 
-.fa-star:hover {
-    color: orange;
+.fa-star:hover { 
     cursor: pointer;
     visibility: hidden
 }
@@ -187,7 +186,6 @@ label.logo img {
 }
 
 .fa-star:checked:before {
-    color: orange;
     position: absolute;
 }
 
@@ -298,6 +296,11 @@ label.logo img {
     border: 1px black solid;
 }
 
+.scrollImg button:hover {
+    cursor: pointer;
+    background-color: rgb(231, 231, 231);
+}
+
 .infoTitle {
     margin-top: 5px;
     text-align: center;
@@ -346,4 +349,8 @@ label.logo img {
     font-size: 25px;
     color: rgb(80, 80, 80);
     font-style: italic;
+}
+
+button {
+    cursor: pointer;
 }
