@@ -266,7 +266,7 @@ function dateLoad() {
     var day = d.getDate();
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    var motdTitle = ["Harambe", "Orangutan Fisherman", "Donkey Kong", "Monkey Wrench", "Curious George", "King Kong Balls", "Zooboomafoo"]
+    var motdTitle = ["Harambe", "Orangutan Fisherman", "Donkey Kong", "Monkey Wrench", "Curious George", "King Kong Balls", "Zoboomafoo"]
     var motdImg = ["images/harambe_01.jpg", "images/fisherman_01.jpg", "images/donkeyKong_01.jpg", "images/monkeyWrench_01.jpg", "images/curiousGeorge_01.jpg", "images/kingKongBalls_01.jpg", "images/zooboomafoo_01.jpg"];
     var motdInfo = [
         ["Cincinnati Zoo", "Shore", "DK Island", "Garage", "Big City", "Prague", "Duke Lemur Center"],
@@ -278,6 +278,15 @@ function dateLoad() {
         ["Race: ", "Race: ", "Race: ", "Race: ", "Race: ", "Race: ", "Race: "],
         ["Died: ", "Occupation: ", "Fav Food: ", "Material: ", "Fav Food: ", "Size: ", "Best Friends: "]
     ]
+    var motdDesc = [
+        ['In 2016, Harambe was shot and killed at the Cincinatti Zoo. He was shot because a 3 year old child fell into his enclosure. This cause outrage against the Cincinatti Zoo for not using alternative methods to subdue Harambe as suppose to killing him. The Cincinatti Zoo said that they did not use a tranquilizer since it was too risky since the drugs would not take immediate effect. He will be forever remembered. #JusticeForHarambe'],
+        ['How did he get a fishing rod? Where is he? Who gave him his hat? How did he get there? There are many mysteries surround the Orangutan Fisherman. The Orangutan Fisherman is living the life we all want to live. Many believe that this is what ultimate nirvana looks like. He is a true outdoorsman. This is my favourite monkey of all time.'],
+        ['He\'s the leader of the bunch, you know him well. He\'s finally back to kick some tail. His coconut gun can fire in spurts. If he shoots ya, it\'s gonna hurt! He\'s bigger, faster, and stronger too. He\'s the first member of the DK crew!'],
+        ['This tool is very useful. As a handyman myself I can safely say this is my favourite tool. This is a sentiment that is hard for soft-handed liberals to understand. Maybe the liberals have a few bolts lose in their head that need to be tightened. As the saying goes, "Lefty loosy! Righty tighty!"'],
+        ['George is a monkey who is curious. He is originally from the book series by H. A. Rey \"Curious George\" (1941). Since he has become a pop culture icon. He is the main character of the TV series \"Curious George\" (2006) that was based off of the book series \"Curious George\". He is also the main character in the movie \"Curious George\" (2006) based off of the book series \"Curious George\".  The movie his home to the original hit song \"Upside Down\" by Jack Johnson. George himself is the pet to the Man in the Yellow Hat. Due to his curiosity, he tends to get the Man in the Yellow Hat in a lot of trouble!'],
+        ['King Kong Balls is an absolute beautiful statue in the heart of Prague, Czechia. The statue is 5.04 meters long, 2.10 meters wide, 2.25 meters high, and weighs 6128 lbs. This statue is based off of photo of a real chimp with huge balls. The statue was built in 2019 by a French artist Denis Defrancesco. King Kong Balls is one of the greatest creations of all time.'],
+        ['Jovian, more well known as "Zoboomafoo" is a lemur that lived at the Duke Lemur Center in North Carolina. Zoboomafoo gained his fame from the self titled PBS show "Zoboomafoo" (1999-2001). In the show, Zoboomafo would join Martin and Chris Krat on many adventures to educate kids on all types of animals. In 2014, Zoboomafoo died. He lived a great life as the most well loved lemur to ever live, and is a big part of many childhoods.'],
+    ]
     document.getElementById("dateId").innerHTML = "Monkey of the Day: " + days[dayOfWeek] + ", " + months[month] + " " + day;
     document.getElementById("title").innerHTML = motdTitle[dayOfWeek];
     document.getElementById("region").innerHTML = motdInfo[0][dayOfWeek];
@@ -287,7 +296,7 @@ function dateLoad() {
     document.getElementById("speciesLeft").innerHTML = motdInfoLeft[1][dayOfWeek];
     document.getElementById("dietLeft").innerHTML = motdInfoLeft[2][dayOfWeek];
     document.getElementById("monkeyImg").src = motdImg[dayOfWeek];
-    document.getElementById("description").innerHTML = monkeyDesc[monkeyType];
+    document.getElementById("description").innerHTML = motdDesc[dayOfWeek];
 }
 /*DATE===============================================*/
 /*STAR_RATING========================================*/
@@ -296,7 +305,7 @@ function star(starNum) {
     for (count = 0; count < starNum; count++) { //CHECK STARS
         document.getElementsByClassName("fa fa-star")[count].checked = true;
         document.getElementsByClassName("fa fa-star")[count].style.color = "orange";
-    } for (count = starNum; count < 5; count++) {
+    } for (count = starNum; count < 5; count++) { //UNCHECK STARS
         document.getElementsByClassName("fa fa-star")[count].checked = false;
         document.getElementsByClassName("fa fa-star")[count].style.color = "rgb(219, 219, 219)";
     }
@@ -305,9 +314,9 @@ function star(starNum) {
 }
 
 function hoveronStar(starNum) {
-    for (count = 0; count < starNum; count++) {
+    for (count = 0; count < starNum; count++) { //COLOUR STARS
         document.getElementsByClassName("fa fa-star")[count].style.color = "orange";
-    } for (count = starNum; count < 5; count++) {
+    } for (count = starNum; count < 5; count++) { //UNCOLOUR STARS
         document.getElementsByClassName("fa fa-star")[count].style.color = "rgb(219, 219, 219)";
         if (document.getElementsByClassName("fa fa-star")[count].checked == true) {
             document.getElementById("starNum").innerHTML = "(" + (parseInt(count)+1) + ".0)";
@@ -315,18 +324,15 @@ function hoveronStar(starNum) {
     }
     hovered = false;
 }
+
 function hoveroffStar() {
     if (!hovered) {
-        resetHover();
-    }
-}
-
-function resetHover() {
-    for (count = 0; count < 5; count++) {
-        document.getElementsByClassName("fa fa-star")[count].style.color = "rgb(219, 219, 219)";
-        if (document.getElementsByClassName("fa fa-star")[count].checked == true) {
-            document.getElementsByClassName("fa fa-star")[count].style.color = "orange";
-            document.getElementById("starNum").innerHTML = "(" + (parseInt(count) + 1) + ".0)";
+        for (count = 0; count < 5; count++) {
+            document.getElementsByClassName("fa fa-star")[count].style.color = "rgb(219, 219, 219)";
+            if (document.getElementsByClassName("fa fa-star")[count].checked == true) { //RE-COLOR STARS
+                document.getElementsByClassName("fa fa-star")[count].style.color = "orange";
+                document.getElementById("starNum").innerHTML = "(" + (parseInt(count) + 1) + ".0)";
+            }
         }
     }
 }
