@@ -309,8 +309,10 @@ function hoveronStar(starNum) {
         document.getElementsByClassName("fa fa-star")[count].style.color = "orange";
     } for (count = starNum; count < 5; count++) {
         document.getElementsByClassName("fa fa-star")[count].style.color = "rgb(219, 219, 219)";
+        if (document.getElementsByClassName("fa fa-star")[count].checked == true) {
+            document.getElementById("starNum").innerHTML = "(" + (parseInt(count)+1) + ".0)";
+        }
     }
-    document.getElementById("starNum").innerHTML = "(" + starNum + ".0)";
     hovered = false;
 }
 function hoveroffStar() {
