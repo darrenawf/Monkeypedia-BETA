@@ -87,6 +87,13 @@ label.logo img {
 }
 
 /* MAIN CONTENT ----------------------------------------------- */
+
+/*Container*/
+.container {
+    overflow: hidden;
+    display: flex;
+}
+
 .monkeyList {
     color: rgb(80, 80, 80);
     font-size: 25px;
@@ -130,6 +137,7 @@ label.logo img {
     height: 407px;
     overflow-y: scroll;
     padding: 2px 5px;
+    line-height: 25px;
 }
 
 .content2 {
@@ -279,8 +287,13 @@ label.logo img {
 
 /* Information (Sub Image)  --------------------------------------- */
 
+.scrollImg {
+    display: flex;
+    width: 400px;
+}
+
 .scrollImg button {
-    width: 198px;
+    width: 200px;
     border-radius: 0px;
     border: 1px black solid;
 }
@@ -331,11 +344,6 @@ label.logo img {
 /*Filter Title*/
 .filterApplied {
     font-size: 25px;
-    color:rgb(80, 80, 80);
+    color: rgb(80, 80, 80);
     font-style: italic;
-}
-
-.container {
-    overflow: hidden;
-    display: flex;
 }
