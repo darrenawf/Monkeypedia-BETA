@@ -9,6 +9,10 @@
 }
 
 /* HEADER ------------------------------------------------- */
+.beta {
+    color: rgb(120, 120, 120);
+    font-size: 25px;
+}
 nav {
     background: whitesmoke;
     height: 100px;
